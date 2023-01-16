@@ -1,3 +1,5 @@
+getLocation();
+
 //get the latitude and longitude of users device
 function getLocation() {
   navigator.geolocation.getCurrentPosition(showPosition, displayError);
@@ -42,7 +44,8 @@ function getWeather(lat, long) {
 
 function weatherData(weather){
   // const temp = document.querySelector('#')
-  console.log(weather.main.temp)
+  console.log('Kelvin', weather.main.temp);
+  console.log('Celsius', kelvinToCelsius(weather.main.temp));
 }
 
 
@@ -51,9 +54,10 @@ function displayError() {
   console.log('Geolocation is not supported by this browser');
 }
 
-getLocation();
-
-
+//Converts kelvins to celsius returns a number with one decimal
+function kelvinToCelsius(kelvin){
+  return Math.round((kelvin-273.15)*10)/10;
+}
 
 function openNav(){
     document.getElementById('sideNav').style.width = '95vw';
