@@ -24,10 +24,10 @@ function getCityName(lat, long) {
     .then(locationData)
 }
 
-function locationData(locationName){
+function locationData(location){
   const name = document.querySelector('#current-location');
-  console.log(locationName[0].name)
-  name.innerText = locationName[0].name
+  console.log(location[0].name)
+  name.innerText = location[0].name
 }
 
 
@@ -37,7 +37,12 @@ function getWeather(lat, long) {
 
   fetch(url)
     .then(response => response.json())
-    .then()
+    .then(weatherData)
+}
+
+function weatherData(weather){
+  // const temp = document.querySelector('#')
+  console.log(weather.main.temp)
 }
 
 
