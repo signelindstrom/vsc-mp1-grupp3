@@ -1,2 +1,36 @@
-/* header text/logo: font-family: 'Sacramento', cursive;
-/* övrig text: font-family: 'Quicksand', sans-serif;
+/* header text/logo: font-family: 'Sacramento', cursive; */
+/* övrig text: font-family: 'Quicksand', sans-serif; */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+
+    font-family: Quicksand;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    border: 2px solid black;
+}
+
+header>h2 {
+    font-family: Sacramento;
+    font-size: 2em;
+}
+
+header>*{
+    display: inline;
+}
+
+header a {
+    text-decoration: none;
+}
