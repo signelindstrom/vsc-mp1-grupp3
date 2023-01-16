@@ -27,10 +27,27 @@ header>h2 {
     font-size: 2em;
 }
 
-header>*{
+header>* {
     display: inline;
 }
 
 header a {
     text-decoration: none;
+}
+
+
+
+
+
+/* ------------------------------------------------------------ Desktop nedan */
+
+
+@media screen and (min-width: 500px) {
+
+    /* 
+    nav{
+
+    }
+    */
+
 }
