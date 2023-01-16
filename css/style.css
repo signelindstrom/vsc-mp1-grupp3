@@ -1,7 +1,4 @@
-/* header text/logo: font-family: 'Sacramento', cursive; */
-/* övrig text: font-family: 'Quicksand', sans-serif; */
-
-:root{
+:root {
 
     --creamWhite: hsl(63, 100%, 96%, 0.9);
 }
@@ -12,11 +9,10 @@
     padding: 0;
     border: 0;
     outline: 0;
-
     font-family: Quicksand;
 }
 
-body{
+body {
     background-color: hsl(340, 60%, 80%, 0.5);
 }
 
@@ -28,7 +24,7 @@ header {
     position: absolute;
     top: 0;
     width: 100vw;
-    height: 15vh;
+    height: 5rem;
     padding: 1em;
     border: 2px dotted black;
     background-color: var(--creamWhite);
@@ -39,6 +35,11 @@ header>h2 {
     font-size: 2em;
 }
 
+header>span{
+    position: absolute;
+    right: 1em;
+}
+
 header>* {
     display: inline;
 }
@@ -47,6 +48,47 @@ header a {
     text-decoration: none;
 }
 
+
+
+
+
+/* ---------- Testar Toggler nedan */
+
+nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+}
+
+nav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+nav a:hover {
+    color: #f1f1f1;
+}
+
+nav .close-nav-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
 
 
 
