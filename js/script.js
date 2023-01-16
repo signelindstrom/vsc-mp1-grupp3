@@ -18,6 +18,7 @@ function showPosition(position) {
       .then()
     }
 
+    // get weather data
     function getWeather(){
       const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=a2de5014979b69e8f9f100296b649487`;
 
