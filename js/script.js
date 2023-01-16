@@ -47,3 +47,13 @@ function displayError() {
 }
 
 getLocation();
+
+
+
+function openNav(){
+    document.getElementById('sideNav').style.width = '95vw';
+}
+
+function closeNav(){
+    document.getElementById('sideNav').style.width = '0';
+}
