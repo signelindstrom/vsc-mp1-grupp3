@@ -3,7 +3,7 @@
 
 :root{
 
-    --creamWhite: hsl(63, 100%, 96%);
+    --creamWhite: hsl(63, 100%, 96%, 0.9);
 }
 
 * {
@@ -17,7 +17,7 @@
 }
 
 body{
-    background-color: hsl(340, 60%, 80%);
+    background-color: hsl(340, 60%, 80%, 0.5);
 }
 
 img {
