@@ -1,9 +1,6 @@
+//get the latitude and longitude of users device
 function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    console.log('Geolocation is not supported by this browser');
-  }
+    navigator.geolocation.getCurrentPosition(showPosition, displayError);
 }
 
 function showPosition(position) {
@@ -11,6 +8,11 @@ function showPosition(position) {
     const longitude = position.coords.longitude;
 
     console.log(`Latitude ${latitude}, Longitude ${longitude}`);
+}
+
+//if getCurrentPosition failed
+function displayError(){
+    console.log('Geolocation is not supported by this browser');
 }
 
 getLocation();
