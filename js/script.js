@@ -11,8 +11,9 @@ function showPosition(position) {
 
   console.log(`Latitude ${latitude}, Longitude ${longitude}`);
 
-  getCityName(latitude, longitude)
+  getCityName(latitude, longitude);
   getWeather(latitude, longitude);
+  houryForecast(latitude, longitude)
 
 }
 
@@ -55,23 +56,36 @@ function weatherData(weather){
   // get humidity
   console.log(weather.main.humidity)
   const humidity = document.querySelector('#humidity');
-  humidity.innerText = `Humidity: ${weather.main.humidity}%`;
+  humidity.innerText = `${weather.main.humidity}%`;
 
   //get times for sunset/sunrise
   console.log('Sunrise:', UTCToDate(weather.sys.sunrise * 1000));
   console.log('Sunset:', UTCToDate(weather.sys.sunset * 1000));
-  const sunInfo = document.querySelector('#sunrise-sunset');
-  sunInfo.innerText = `Sunrise/sunset: ${UTCToDate(weather.sys.sunrise * 1000)} / ${UTCToDate(weather.sys.sunset * 1000)}`
+  const sunInfo = document.querySelector('#sunset-sunrise');
+  sunInfo.innerText = `${UTCToDate(weather.sys.sunrise * 1000)} / ${UTCToDate(weather.sys.sunset * 1000)}`;
 
   // get wind speed
   const wind = document.querySelector('#wind')
   console.log(weather.wind.speed)
-  wind.innerText = `Wind: ${weather.wind.speed} m/s`
+  wind.innerText = `${weather.wind.speed} m/s`
 
   // get temp feels like
   const tempFeelsLike = document.querySelector('#temp-feels-like');
   console.log(kelvinToCelsius(weather.main.feels_like))
-  tempFeelsLike.innerText = `Feels like: ${kelvinToCelsius(weather.main.feels_like)} ºC`
+  tempFeelsLike.innerText = `${kelvinToCelsius(weather.main.feels_like)} ºC`
+}
+
+// get hourly forecast
+function getHouryForecast(lat, long){
+  const url = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${lat}&lon=${long}&appid=a2de5014979b69e8f9f100296b649487`;
+
+  fetch(url)
+  .then(response=> response.json)
+  .then(hourlyData)
+}
+
+function hourlyData(hourlyForecast){
+
 }
 
 //if getCurrentPosition failed
