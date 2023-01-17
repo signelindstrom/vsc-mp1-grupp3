@@ -22,12 +22,11 @@ img {
 }
 
 header {
-    position: absolute;
+    position: sticky;
     top: 0;
     width: 100vw;
     height: 5rem;
     padding: 1em;
-    border: 2px dotted black;
     background-color: var(--creamWhite);
 }
 
