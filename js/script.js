@@ -62,6 +62,17 @@ function weatherData(weather){
 
   console.log('Sunrise:', UTCToDate(weather.sys.sunrise));
   console.log('Sunset:', UTCToDate(weather.sys.sunset));
+
+  console.log(weather.sys.sunset);
+  console.log(weather.sys.sunrise);
+
+  const wind = document.querySelector('#wind')
+  console.log(weather.wind.speed)
+  wind.innerText = `Wind: ${weather.wind.speed} m/s`
+
+  const tempFeelsLike = document.querySelector('#temp-feels-like');
+  console.log(kelvinToCelsius(weather.main.feels_like))
+  tempFeelsLike.innerText = `Feels like: ${kelvinToCelsius(weather.main.feels_like)} ºC`
 }
 
 function UTCToDate(utc){
