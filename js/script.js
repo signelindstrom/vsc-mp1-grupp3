@@ -59,8 +59,7 @@ function weatherData(weather){
   console.log(weather.sys.sunset);
   console.log(weather.sys.sunrise);
 
-<<<<<<< HEAD
-=======
+
   console.log('Sunrise:', UTCToDate(weather.sys.sunrise));
   console.log('Sunset:', UTCToDate(weather.sys.sunset));
 
@@ -75,7 +74,6 @@ function weatherData(weather){
   console.log(kelvinToCelsius(weather.main.feels_like))
   tempFeelsLike.innerText = `Feels like: ${kelvinToCelsius(weather.main.feels_like)} ºC`
 }
-
 
 //if getCurrentPosition failed
 function displayError() {
@@ -93,4 +91,9 @@ function openNav(){
 
 function closeNav(){
   document.querySelector('.sideNav').style.width = '0';
+}
+
+function UTCToDate(utc){
+  let options = { hour: '2-digit', minute: '2-digit', hour12: false };
+  return new Date(utc).toLocaleTimeString([], options);
 }
