@@ -43,7 +43,8 @@ function getWeather(lat, long) {
 }
 
 function weatherData(weather){
-  // const temp = document.querySelector('#')
+  const temp = document.querySelector('#current-temp');
+  temp.innerText = kelvinToCelsius(weather.main.temp);
   console.log('Kelvin', weather.main.temp);
   console.log('Celsius', kelvinToCelsius(weather.main.temp));
 }
