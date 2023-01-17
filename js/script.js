@@ -60,9 +60,9 @@ function kelvinToCelsius(kelvin){
 }
 
 function openNav(){
-    document.getElementById('sideNav').style.width = '95vw';
+    document.querySelector('.sideNav').style.width = '95vw';
 }
 
 function closeNav(){
-    document.getElementById('sideNav').style.width = '0';
+  document.querySelector('.sideNav').style.width = '0';
 }

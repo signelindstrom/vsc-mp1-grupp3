@@ -35,7 +35,7 @@ header>h2 {
     font-size: 2em;
 }
 
-header>span{
+header>span {
     position: absolute;
     right: 1em;
     font-size: 30px;
@@ -94,12 +94,30 @@ nav .close-nav-btn {
 /* ------------------------------------------------------------ Desktop nedan */
 
 
-/* @media screen and (min-width: 500px) {
+@media screen and (min-width: 500px) {
 
-    
-    nav{
-
+    header>*{
+        position: absolute;
     }
-   
 
-} */
+    .nav-toggler,
+    .close-nav-btn {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav a {
+        margin: 1em;
+        font-size: 1em;
+    }
+
+}
