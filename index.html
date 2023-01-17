@@ -22,8 +22,8 @@
 <body>
     <header>
         <h2>Weather forecast</h2>
-        <span class="nav-toggler" onclick="openNav()">&#9776;</span>
-        <nav class="sideNav">
+        <span onclick="openNav()">&#9776;</span>
+        <nav id="sideNav">
             <a href="javascript:void(0)" class="close-nav-btn" onclick="closeNav()">&times;</a>
             <a href="index.html">Home</a>
             <a href="html/search.html">Search</a>
@@ -32,15 +32,7 @@
         </nav>
     </header>
 
-    <main>
-        <article class="home-main-articles"></article>
-
-        <article class="home-main-articles"></article>
-
-        <article class="home-main-articles"></article>
-
-        <article class="home-main-articles"></article>
-        
+    <section>
         <article class="current-weather-container" id="current-weather">
             <div class="location-container">
                 <span class="material-symbols-outlined">location_on</span>
@@ -50,8 +42,8 @@
                 <img id="weather-icon" src="#" alt="Weather-icon">
                 <h3 id="current-temp"></h3>
             </div>
-
         </article>
+        
         <article id="more-info">
             <p id="sunset-sunrise"></p>
             <p id="humidity"></p>
@@ -60,7 +52,7 @@
         </article>
         <article id="hour-forecast"></article>
         <article id="day-forecast"></article>
-    </main>
+    </section>
 
     <footer></footer>
 
