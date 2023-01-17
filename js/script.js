@@ -59,6 +59,15 @@ function weatherData(weather){
   console.log(weather.sys.sunset);
   console.log(weather.sys.sunrise);
 
+<<<<<<< HEAD
+=======
+  console.log('Sunrise:', UTCToDate(weather.sys.sunrise));
+  console.log('Sunset:', UTCToDate(weather.sys.sunset));
+
+  console.log(weather.sys.sunset);
+  console.log(weather.sys.sunrise);
+
+>>>>>>> parent of a7da5bc (kommentarer)
   const wind = document.querySelector('#wind')
   console.log(weather.wind.speed)
   wind.innerText = `Wind: ${weather.wind.speed} m/s`
