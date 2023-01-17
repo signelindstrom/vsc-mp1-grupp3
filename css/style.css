@@ -147,7 +147,7 @@ nav .close-nav-btn {
 /* -------------------- FOOTER -------------------- */
 
 footer{
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100vw;
     height: 5rem;
