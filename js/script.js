@@ -56,10 +56,18 @@ function weatherData(weather){
   const humidity = document.querySelector('#humidity');
   humidity.innerText = `Humidity: ${weather.main.humidity}%`;
 
-  console.log(weather.sys.sunset);
-  console.log(weather.sys.sunrise);
+  //get times for sunset/sunrise
+  console.log('UTC', weather.sys.sunset);
+  console.log('UTC', weather.sys.sunrise);
+
+  console.log('Sunrise:', UTCToDate(weather.sys.sunrise));
+  console.log('Sunset:', UTCToDate(weather.sys.sunset));
 }
 
+function UTCToDate(utc){
+  let options = { hour: '2-digit', minute: '2-digit', hour12: false };
+  return new Date(utc).toLocaleTimeString([], options);
+}
 
 //if getCurrentPosition failed
 function displayError() {
