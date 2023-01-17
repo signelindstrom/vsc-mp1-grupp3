@@ -136,12 +136,12 @@ nav .close-nav-btn {
 /* -------------------- FOOTER -------------------- */
 
 footer{
-    position: absolute;
-    background-color: var(--bgColorHeadFoot);
+    position: relative;
     bottom: 0;
     width: 100vw;
     height: 5rem;
     padding: 1em;
+    background-color: var(--bgColorHeadFoot);
 
     display: flex;
     flex-flow: row nowrap;
