@@ -55,23 +55,23 @@ function weatherData(weather){
   // get humidity
   console.log(weather.main.humidity)
   const humidity = document.querySelector('#humidity');
-  humidity.innerText = `Humidity: ${weather.main.humidity}%`;
+  humidity.innerText = `${weather.main.humidity}%`;
 
   //get times for sunset/sunrise
   console.log('Sunrise:', UTCToDate(weather.sys.sunrise * 1000));
   console.log('Sunset:', UTCToDate(weather.sys.sunset * 1000));
   const sunInfo = document.querySelector('#sunrise-sunset');
-  sunInfo.innerText = `Sunrise/sunset: ${UTCToDate(weather.sys.sunrise * 1000)} / ${UTCToDate(weather.sys.sunset * 1000)}`
+  sunInfo.innerText = `${UTCToDate(weather.sys.sunrise * 1000)} / ${UTCToDate(weather.sys.sunset * 1000)}`
 
   // get wind speed
   const wind = document.querySelector('#wind')
   console.log(weather.wind.speed)
-  wind.innerText = `Wind: ${weather.wind.speed} m/s`
+  wind.innerText = `${weather.wind.speed} m/s`
 
   // get temp feels like
   const tempFeelsLike = document.querySelector('#temp-feels-like');
   console.log(kelvinToCelsius(weather.main.feels_like))
-  tempFeelsLike.innerText = `Feels like: ${kelvinToCelsius(weather.main.feels_like)} ºC`
+  tempFeelsLike.innerText = `${kelvinToCelsius(weather.main.feels_like)} ºC`
 }
 
 //if getCurrentPosition failed
