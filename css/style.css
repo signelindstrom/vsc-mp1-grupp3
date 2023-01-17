@@ -116,11 +116,6 @@ nav .close-nav-btn {
     color: var(--accentBlue);
 }
 
-.current-weather-container{
-    text-align: center;
-    margin-top: 4rem;
-}
-
 .current-temp-container{
     display: flex;
     justify-content: center;
