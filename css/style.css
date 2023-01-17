@@ -88,8 +88,17 @@ nav .close-nav-btn {
     margin-right: 0.5em;
 }
 
+.current-weather-container{
+    text-align: center;
+    margin-top: 4rem;
+}
 
-
+.current-weather-container div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+}
 
 /* ------------------------------------------------------------ Desktop nedan */
 

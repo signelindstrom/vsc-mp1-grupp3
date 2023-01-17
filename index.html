@@ -29,11 +29,20 @@
     </header>
 
     <section>
-        <article id="current-weather">
+        <article class="current-weather-container" id="current-weather">
             <h1 id="current-location"></h1>
-            <h3 id="current-temp"></h3>
+            <div>
+                <img id="weather-icon" src="#" alt="Weather-icon">
+                <h3 id="current-temp"></h3>
+            </div>
+
         </article>
-        <article id="more-info"></article>
+        <article id="more-info">
+            <p id="sunset-sunrise"></p>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+            <p id="temp-feels-like"></p>
+        </article>
         <article id="hour-forecast"></article>
         <article id="day-forecast"></article>
     </section>

@@ -43,9 +43,21 @@ function getWeather(lat, long) {
 }
 
 function weatherData(weather){
-  // const temp = document.querySelector('#')
+  const temp = document.querySelector('#current-temp');
+  temp.innerText = kelvinToCelsius(weather.main.temp) + ' ºC';
   console.log('Kelvin', weather.main.temp);
   console.log('Celsius', kelvinToCelsius(weather.main.temp));
+
+  const img = document.querySelector('#weather-icon');
+  const icon = weather.weather[0].icon
+  img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+
+  console.log(weather.main.humidity)
+  const humidity = document.querySelector('#humidity');
+  humidity.innerText = `Humidity: ${weather.main.humidity}%`;
+
+  console.log(weather.sys.sunset);
+  console.log(weather.sys.sunrise);
 }
 
 
