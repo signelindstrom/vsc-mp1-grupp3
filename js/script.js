@@ -58,6 +58,10 @@ function weatherData(weather){
 
   console.log(weather.sys.sunset);
   console.log(weather.sys.sunrise);
+
+  const wind = document.querySelector('#wind')
+  console.log(weather.wind.speed)
+  wind.innerText = `Wind: ${weather.wind.speed} m/s`
 }
 
 
