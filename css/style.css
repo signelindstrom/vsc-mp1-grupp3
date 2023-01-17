@@ -2,6 +2,7 @@
 
     --creamWhite: hsl(63, 100%, 96%, 0.9);
     --hoverGrey: hsl(230, 20%, 70%);
+    --accentBlue: hsl(240, 87%, 65%);
 }
 
 * {
@@ -88,16 +89,38 @@ nav .close-nav-btn {
     margin-right: 0.5em;
 }
 
+
+/*current weather*/
+.location-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+}
+
+.location-container span{
+    color: var(--accentBlue);
+}
+
 .current-weather-container{
     text-align: center;
     margin-top: 4rem;
 }
 
-.current-weather-container div{
+.current-temp-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-top: 2rem;
+}
+
+.current-temp-container img{
+    width: 25vw;
+}
+
+.current-temp-container h3{
+    font-size: 5vw;
+    font-weight: 1000;
 }
 
 /* ------------------------------------------------------------ Desktop nedan */
