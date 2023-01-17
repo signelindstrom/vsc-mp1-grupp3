@@ -52,6 +52,7 @@ function weatherData(weather){
   const icon = weather.weather[0].icon
   img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
+  // get humidity
   console.log(weather.main.humidity)
   const humidity = document.querySelector('#humidity');
   humidity.innerText = `Humidity: ${weather.main.humidity}%`;
@@ -59,10 +60,16 @@ function weatherData(weather){
   console.log('Sunrise:', UTCToDate(weather.sys.sunrise * 1000));
   console.log('Sunset:', UTCToDate(weather.sys.sunset * 1000));
 
+  //get times for sunset/sunrise
+  console.log('Sunrise:', UTCToDate(weather.sys.sunrise));
+  console.log('Sunset:', UTCToDate(weather.sys.sunset));
+
+  // get wind speed
   const wind = document.querySelector('#wind')
   console.log(weather.wind.speed)
   wind.innerText = `Wind: ${weather.wind.speed} m/s`
 
+  // get temp feels like
   const tempFeelsLike = document.querySelector('#temp-feels-like');
   console.log(kelvinToCelsius(weather.main.feels_like))
   tempFeelsLike.innerText = `Feels like: ${kelvinToCelsius(weather.main.feels_like)} ºC`
