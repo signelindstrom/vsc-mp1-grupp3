@@ -48,7 +48,9 @@ function weatherData(weather){
   console.log('Kelvin', weather.main.temp);
   console.log('Celsius', kelvinToCelsius(weather.main.temp));
 
-  console.log(weather.weather[0].main);
+  const img = document.querySelector('#weather-icon');
+  const icon = weather.weather[0].icon
+  img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`
 }
 
 
