@@ -54,7 +54,7 @@ function weatherData(weather){
 
   console.log(weather.main.humidity)
   const humidity = document.querySelector('#humidity');
-  humidity.innerText = `${weather.main.humidity}%`;
+  humidity.innerText = `Humidity: ${weather.main.humidity}%`;
 
   console.log(weather.sys.sunset);
   console.log(weather.sys.sunrise);
