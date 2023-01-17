@@ -1,3 +1,5 @@
+/* -------------------- UNIVERSAL -------------------- */
+
 :root {
 
     --creamWhite: hsl(63, 100%, 96%, 0.9);
@@ -21,6 +23,9 @@ body {
 img {
     max-width: 100%;
 }
+
+
+/* -------------------- HEADER -------------------- */
 
 header {
     position: sticky;
@@ -90,45 +95,62 @@ nav .close-nav-btn {
 }
 
 
+/* --------------------- MAIN ----------------------- */
+
+main {
+    margin-top: 2em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.home-main-articles {
+    width: 50vw;
+    height: 15vh;
+    border: violet 2px solid;
+}
+
+
 /*current weather*/
-.location-container{
+.location-container {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 5vw;
 }
 
-.location-container span{
+.location-container span {
     color: var(--accentBlue);
 }
 
-.current-weather-container{
+.current-weather-container {
     text-align: center;
     margin-top: 4rem;
 }
 
-.current-temp-container{
+.current-temp-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
 }
 
-.current-temp-container img{
+.current-temp-container img {
     width: 25vw;
 }
 
-.current-temp-container h3{
+.current-temp-container h3 {
     font-size: 5vw;
     font-weight: 1000;
 }
 
-/* ------------------------------------------------------------ Desktop nedan */
 
+/* -------------------- DESKTOP -------------------- */
 
 @media screen and (min-width: 500px) {
 
-    header>*{
+    header>* {
         position: absolute;
     }
 
@@ -151,19 +173,4 @@ nav .close-nav-btn {
         margin: 1em;
         font-size: 1em;
     }
-
-    main{
-        margin-top: 2em;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .homemainarticles{
-        width: 50vw;
-        height: 15vh;
-        border: violet 2px solid;
-    }
-
 }
