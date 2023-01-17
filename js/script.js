@@ -11,8 +11,9 @@ function showPosition(position) {
 
   console.log(`Latitude ${latitude}, Longitude ${longitude}`);
 
-  getCityName(latitude, longitude)
+  getCityName(latitude, longitude);
   getWeather(latitude, longitude);
+  houryForecast(latitude, longitude)
 
 }
 
@@ -72,6 +73,19 @@ function weatherData(weather){
   const tempFeelsLike = document.querySelector('#temp-feels-like');
   console.log(kelvinToCelsius(weather.main.feels_like))
   tempFeelsLike.innerText = `${kelvinToCelsius(weather.main.feels_like)} ºC`
+}
+
+// get hourly forecast
+function getHouryForecast(lat, long){
+  const url = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${lat}&lon=${long}&appid=a2de5014979b69e8f9f100296b649487`;
+
+  fetch(url)
+  .then(response=> response.json)
+  .then(hourlyData)
+}
+
+function hourlyData(hourlyForecast){
+
 }
 
 //if getCurrentPosition failed

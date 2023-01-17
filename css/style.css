@@ -1,8 +1,15 @@
 :root {
 
-    --creamWhite: hsl(63, 100%, 96%, 0.9);
     --hoverGrey: hsl(230, 20%, 70%);
     --accentBlue: hsl(240, 87%, 65%);
+
+    --bgColorLightMode: hsl(186, 67%, 91%);
+    --txtColorLightMode: hsl(195, 8%, 9%);
+
+    --bgColorDarkMode: hsl(0, 0%, 12%);
+    --txtColorDarkMode: hsl(196, 27%, 92%);
+
+    --bgColorHeadFoot: hsl(0, 0%, 100%, 0.8);
 }
 
 * {
@@ -15,7 +22,7 @@
 }
 
 body {
-    background-color: hsl(340, 60%, 80%, 0.5);
+    background-color: var(--bgColorLightMode);
 }
 
 img {
@@ -28,7 +35,7 @@ header {
     width: 100vw;
     height: 5rem;
     padding: 1em;
-    background-color: var(--creamWhite);
+    background-color: var(--bgColorHeadFoot);
 }
 
 header>h2 {
@@ -58,7 +65,7 @@ nav {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: var(--creamWhite);
+    background-color: var(--bgColorHeadFoot);
     overflow-x: hidden;
     transition: 1s;
     padding-top: 4em;
@@ -102,11 +109,6 @@ nav .close-nav-btn {
     color: var(--accentBlue);
 }
 
-.current-weather-container{
-    text-align: center;
-    margin-top: 4rem;
-}
-
 .current-temp-container{
     display: flex;
     justify-content: center;
@@ -140,6 +142,7 @@ nav .close-nav-btn {
     nav {
         position: static;
         width: 100%;
+        background-color: transparent;
         display: flex;
         flex-flow: row nowrap;
         justify-content: flex-end;
