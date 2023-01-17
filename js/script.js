@@ -60,8 +60,8 @@ function weatherData(weather){
   //get times for sunset/sunrise
   console.log('Sunrise:', UTCToDate(weather.sys.sunrise * 1000));
   console.log('Sunset:', UTCToDate(weather.sys.sunset * 1000));
-  const sunInfo = document.querySelector('#sunrise-sunset');
-  sunInfo.innerText = `${UTCToDate(weather.sys.sunrise * 1000)} / ${UTCToDate(weather.sys.sunset * 1000)}`
+  const sunInfo = document.querySelector('#sunset-sunrise');
+  sunInfo.innerText = `${UTCToDate(weather.sys.sunrise * 1000)} / ${UTCToDate(weather.sys.sunset * 1000)}`;
 
   // get wind speed
   const wind = document.querySelector('#wind')
