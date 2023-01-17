@@ -96,7 +96,8 @@ nav .close-nav-btn {
 .current-weather-container div{
     display: flex;
     justify-content: space-around;
-    margin-top: 4rem;
+    align-items: center;
+    margin-top: 2rem;
 }
 
 /* ------------------------------------------------------------ Desktop nedan */
