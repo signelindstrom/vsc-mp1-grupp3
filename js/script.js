@@ -50,7 +50,14 @@ function weatherData(weather){
 
   const img = document.querySelector('#weather-icon');
   const icon = weather.weather[0].icon
-  img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`
+  img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+
+  console.log(weather.main.humidity)
+  const humidity = document.querySelector('#humidity');
+  humidity.innerText = `${weather.main.humidity}%`;
+
+  console.log(weather.sys.sunset);
+  console.log(weather.sys.sunrise);
 }
 
 
