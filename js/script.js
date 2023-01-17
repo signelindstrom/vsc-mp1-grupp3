@@ -47,6 +47,9 @@ function weatherData(weather){
   temp.innerText = kelvinToCelsius(weather.main.temp) + ' ºC';
   console.log('Kelvin', weather.main.temp);
   console.log('Celsius', kelvinToCelsius(weather.main.temp));
+
+  const mainWeather = document.querySelector('#current-weather');
+  console.log(weather.weather[0].main);
 }
 
 
