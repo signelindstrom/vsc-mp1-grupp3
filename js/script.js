@@ -13,7 +13,7 @@ function showPosition(position) {
 
   getCityName(latitude, longitude);
   getWeather(latitude, longitude);
-  houryForecast(latitude, longitude)
+  getHourlyForecast(latitude, longitude);
 
 }
 
@@ -76,7 +76,7 @@ function weatherData(weather){
 }
 
 // get hourly forecast
-function getHouryForecast(lat, long){
+function getHourlyForecast(lat, long){
   const url = `https://pro.openweathermap.org/data/2.5/forecast/hourly?lat=${lat}&lon=${long}&appid=a2de5014979b69e8f9f100296b649487`;
 
   fetch(url)
@@ -85,7 +85,6 @@ function getHouryForecast(lat, long){
 }
 
 function hourlyData(hourlyForecast){
-
 }
 
 //if getCurrentPosition failed
