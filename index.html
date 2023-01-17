@@ -13,7 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
 
     <!--Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <script src="js/script.js" defer></script>
     <title>Weather forecast</title>
@@ -33,33 +34,33 @@
     </header>
 
     <main>
-  
-        <article class="home-main-articles" id="current-weather">
-          <div class="location-container">
-              <span class="material-symbols-outlined">location_on</span>
-              <h1 id="current-location"></h1>
-          </div>
-          <div class="current-icon-container">
-              <img id="weather-icon" src="#" alt="Weather-icon">
-          </div>
-          <div class="current-temp-container">
-              <h3 id="current-temp"></h3>
-          </div>
-          </article>
-          <article class="home-main-articles" id="more-info">
-              <div>Feels like <span id="temp-feels-like"></span></div>
-              <div>Sunset / Sunrise<span id="sunset-sunrise"></span></div>
-              <div>Humidity<span id="humidity"></span></div>
-              <div>Wind<span id="wind"></span></div>
-          </article>
-    
-          <article class="home-main-articles" id="hour-forecast"></article>
-    
-          <article class="home-main-articles" id="day-forecast"></article>
-    
-      </main>
 
-      <footer>
+        <article id="current-weather">
+            <div class="location-container">
+                <span class="material-symbols-outlined">location_on</span>
+                <h1 id="current-location"></h1>
+            </div>
+
+            <div class="current-temp-container">
+                <img id="weather-icon" src="#" alt="Weather-icon">
+                <h3 id="current-temp"></h3>
+            </div>
+        </article>
+
+        <article class="local-info-container" id="more-info">
+            <div>Feels like <span id="temp-feels-like"></span></div>
+            <div>Sunset / Sunrise<span id="sunset-sunrise"></span></div>
+            <div>Humidity<span id="humidity"></span></div>
+            <div>Wind<span id="wind"></span></div>
+        </article>
+
+        <article class="home-main-articles" id="hour-forecast"></article>
+
+        <article class="home-main-articles" id="day-forecast"></article>
+
+    </main>
+
+    <footer>
         <p>© 2023 Weather Forecast AB</p>
         <div id="soc-media-links">
             <img src="../images/icons8-facebook.svg" alt="Facebook">
