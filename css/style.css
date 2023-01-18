@@ -42,13 +42,19 @@ header {
     height: 5rem;
     padding: 1em;
     background-color: var(--bgColorHeadFoot);
+    display: flex;
+    align-items: center;
 }
 
 header>h2>a {
     font-family: Sacramento;
+    text-align: center;
     font-size: 2em;
     text-decoration: none;
     color: black;
+    background-color: hsl(0, 0%, 100%, 0.8);
+    border-radius: 50%;
+    width: 6vw;
 }
 
 header>span {
@@ -204,6 +210,10 @@ footer img{
     nav a {
         margin: 1em;
         font-size: 1em;
+    }
+
+    header h2 a{
+        background-color: var(--bgColorHeadFoot);
     }
 
     header h2 a::after{
