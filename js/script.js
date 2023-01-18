@@ -122,7 +122,8 @@ function dailyData(dailyForecast) {
       }
     }
   });
-  
+
+  // get 3-hour span temp
   for(let i = 0; i<4; i++){
     const timeContainer = document.querySelector('#time-container');
     const hourlyTemp = document.createElement('span');
