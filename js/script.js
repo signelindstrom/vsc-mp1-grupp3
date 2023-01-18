@@ -106,6 +106,9 @@ function dailyData(dailyForecast) {
       if (element.dt_txt.includes('12:00:00')) {
         console.log(element.dt_txt)
         console.log(kelvinToCelsius(element.main.temp))
+
+        const dayContainer = document.querySelector('#day-container');
+        
       }
     }
   });
