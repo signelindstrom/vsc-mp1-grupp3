@@ -44,9 +44,11 @@ header {
     background-color: var(--bgColorHeadFoot);
 }
 
-header>h2 {
+header>h2>a {
     font-family: Sacramento;
     font-size: 2em;
+    text-decoration: none;
+    color: black;
 }
 
 header>span {
