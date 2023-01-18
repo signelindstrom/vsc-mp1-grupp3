@@ -82,6 +82,7 @@ function getDailyForecast(lat, long) {
   fetch(url)
     .then(response => response.json())
     .then(dailyData)
+    .then(hourlyData)
 }
 
 // dagens datum
@@ -122,6 +123,12 @@ function dailyData(dailyForecast) {
       }
     }
   });
+}
+
+function hourlyData(hourlyForecast){
+  hourlyForecast.list.forEach(element=>{
+    
+  })
 }
 
 
