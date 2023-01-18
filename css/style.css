@@ -114,7 +114,7 @@ nav .close-nav-btn {
 /* -------------------- MAIN -------------------- */
 
 
-main{
+#index-main{
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
