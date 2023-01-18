@@ -139,7 +139,7 @@ nav .close-nav-btn {
     background-color: var(--bgColorHeadFoot);
     margin: 0 2rem 0;
     padding: 1rem;
-    margin-top: 3rem;
+    margin: 2rem 2rem 2rem;
 }
 
 .info-container div{
@@ -158,17 +158,9 @@ nav .close-nav-btn {
 /* -------------------- FOOTER -------------------- */
 
 footer{
-    position: absolute;
-    bottom: 0;
     width: 100vw;
     height: 5rem;
-    padding: 1em;
     background-color: var(--bgColorHeadFoot);
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-
 }
 
 footer div{
