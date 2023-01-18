@@ -125,11 +125,19 @@ function dailyData(dailyForecast) {
 
   // get 3-hour span temp
   for(let i = 0; i<4; i++){
-    const timeContainer = document.querySelector('#time-container');
+    const hourlyTempContainer = document.querySelector('#hourly-temp-container');
     const hourlyTemp = document.createElement('span');
-    timeContainer.appendChild(hourlyTemp);
+    hourlyTempContainer.appendChild(hourlyTemp);
     hourlyTemp.innerText = `${kelvinToCelsius(dailyForecast.list[i].main.temp)} ºC`
     console.log(dailyForecast.list[i].main.temp)
+
+    const tempTime = dailyForecast.list[i].dt_txt.split(' ')
+    const tempTimeCompressed = tempTime[1].split(':')
+    console.log(tempTimeCompressed[0], tempTimeCompressed[1])
+    const timeContainer = document.querySelector('#time-container');
+    const timeHour = document.createElement('span');
+    timeContainer.appendChild(timeHour);
+    timeHour.innerText = `${tempTimeCompressed[0]}:${tempTimeCompressed[1]}`
   }
 }
 
