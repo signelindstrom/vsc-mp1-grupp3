@@ -58,10 +58,10 @@ function weatherData(weather) {
   const humidity = document.querySelector('#humidity');
   humidity.innerText = `${weather.main.humidity}%`;
 
-  //get times for sunset/sunrise
+  //get times for sunrise/sunset
   console.log('Sunrise:', UTCToDate(weather.sys.sunrise * 1000));
   console.log('Sunset:', UTCToDate(weather.sys.sunset * 1000));
-  const sunInfo = document.querySelector('#sunset-sunrise');
+  const sunInfo = document.querySelector('#sunrise-sunset');
   sunInfo.innerText = `${UTCToDate(weather.sys.sunrise * 1000)} / ${UTCToDate(weather.sys.sunset * 1000)}`;
 
   // get wind speed
