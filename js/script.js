@@ -111,8 +111,15 @@ function dailyData(dailyForecast) {
         const dayDate = document.createElement('span');
         dayContainer.appendChild(dayDate);
         const dateString = element.dt_txt.split(' ');
-        console.log(dateString[0])
-        dayDate.innerText = dateString[0];
+        const dateStringFinal = dateString[0].split('-')
+        dayDate.innerText = `${dateStringFinal[2]}/${dateStringFinal[1]}`;
+
+        // 4-day icons
+        const dayIconContainer = document.querySelector('#day-icon-container');
+        const dayIcon = document.createElement('img');
+        dayIconContainer.appendChild(dayIcon);
+        dayIcon.src = `http://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png`;
+        console.log(element.weather[0].icon);
 
         // 4-day temp
         const tempContainer = document.querySelector('#temp-container');
@@ -124,13 +131,21 @@ function dailyData(dailyForecast) {
   });
 
   // get 3-hour span temp
-  for(let i = 0; i<4; i++){
+  for (let i = 0; i < 4; i++) {
     const hourlyTempContainer = document.querySelector('#hourly-temp-container');
     const hourlyTemp = document.createElement('span');
     hourlyTempContainer.appendChild(hourlyTemp);
     hourlyTemp.innerText = `${kelvinToCelsius(dailyForecast.list[i].main.temp)} ºC`
     console.log(dailyForecast.list[i].main.temp)
 
+    // 3-hour span icons
+    const hourlyIconContainer = document.querySelector('#hourly-icon-container');
+    const hourlyIcon = document.createElement('img');
+    hourlyIconContainer.appendChild(hourlyIcon);
+    hourlyIcon.src = `http://openweathermap.org/img/wn/${dailyForecast.list[i].weather[0].icon}@2x.png`;
+    console.log(dailyForecast.list[i].weather[0].icon)
+
+    // 3-hour time-stamp
     const tempTime = dailyForecast.list[i].dt_txt.split(' ')
     const tempTimeCompressed = tempTime[1].split(':')
     console.log(tempTimeCompressed[0], tempTimeCompressed[1])
