@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <script src="../js/script.js" defer></script>
+    <script src="../js/search.js" defer></script>
     <title>Weather forecast</title>
 </head>
 
@@ -31,28 +31,56 @@
     <article class="search-page-articles">
         <section id="search-page-text">
             <h3>Search for a city to get the weather forecast</h3>
-            <input type="text">
-            <button>Search</button>
+            <form action="">
+                <input id="city-search-input" type="text">
+                <button id="city-search-button">Search</button>
+            </form>
         </section>
     </article>
 
     <article class="search-page-articles" id="city-container">
-        <div class="local-info-container" id="city-one"><h4><b>En stad</b></h4>
+        <div class="info-container" id="city-one">
+            <div>
+                <h4><b id="city-name"></b></h4>
+                <img id="weather-icon" src="#" alt="Weather-icon">
+                <h3 id="current-temp"></h3>
+            </div>
+            <div><span >Feels like</span><span id="temp-feels-like"></span></div>
+            <div><span>Humidity</span><span id="humidity"></span></div>
+            <div><span>Wind</span><span id="wind"></span></div>
+        </div>
+
+        <div class="info-container" id="city-two">
+            <h4><b>En annan stad</b></h4>
+            <div>
+                <h4><b id="city-name"></b></h4>
+                <img id="weather-icon" src="#" alt="Weather-icon">
+                <h3 id="current-temp"></h3>
+            </div>
             <div><span>Feels like</span><span id="temp-feels-like">15°</span></div>
             <div><span>Humidity</span><span id="humidity">88%</span></div>
             <div><span>Wind</span><span id="wind">7 m/s</span></div>
         </div>
-        <div class="local-info-container" id="city-two"><h4><b>En annan stad</b></h4>
+
+        <div class="info-container" id="city-three">
+            <h4><b>En tredje stad</b></h4>
+            <div>
+                <h4><b id="city-name"></b></h4>
+                <img id="weather-icon" src="#" alt="Weather-icon">
+                <h3 id="current-temp"></h3>
+            </div>
             <div><span>Feels like</span><span id="temp-feels-like">15°</span></div>
             <div><span>Humidity</span><span id="humidity">88%</span></div>
             <div><span>Wind</span><span id="wind">7 m/s</span></div>
         </div>
-        <div class="local-info-container" id="city-three"><h4><b>En tredje stad</b></h4>
-            <div><span>Feels like</span><span id="temp-feels-like">15°</span></div>
-            <div><span>Humidity</span><span id="humidity">88%</span></div>
-            <div><span>Wind</span><span id="wind">7 m/s</span></div>
-        </div>
-        <div class="local-info-container" id="city-four"><h4><b>En fjärde stad</b></h4>
+
+        <div class="info-container" id="city-four">
+            <h4><b>En fjärde stad</b></h4>
+            <div>
+                <h4><b id="city-name"></b></h4>
+                <img id="weather-icon" src="#" alt="Weather-icon">
+                <h3 id="current-temp"></h3>
+            </div>
             <div><span>Feels like</span><span id="temp-feels-like">15°</span></div>
             <div><span>Humidity</span><span id="humidity">88%</span></div>
             <div><span>Wind</span><span id="wind">7 m/s</span></div>
