@@ -113,12 +113,12 @@ function dailyData(dailyForecast) {
         const dateString = element.dt_txt.split(' ');
         console.log(dateString[0])
         dayDate.innerText = dateString[0];
-        
+
         // 4-day temp
         const tempContainer = document.querySelector('#temp-container');
         const dayTemp = document.createElement('span');
         tempContainer.appendChild(dayTemp);
-        dayTemp.innerText = kelvinToCelsius(element.main.temp);
+        dayTemp.innerText = `${kelvinToCelsius(element.main.temp)} ºC`;
       }
     }
   });
