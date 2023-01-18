@@ -12,7 +12,8 @@
     --bgColorDarkMode: hsl(0, 0%, 12%);
     --txtColorDarkMode: hsl(196, 27%, 92%);
 
-    --bgColorHeadFoot: hsl(0, 0%, 100%, 0.8);
+    --bgColorHeadFoot: hsl(186, 67%, 95%);
+    --bgColorSideNav: hsl(0, 0%, 100%, 0.8);
 }
 
 * {
@@ -70,7 +71,7 @@ nav {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: var(--bgColorHeadFoot);
+    background-color: var(--bgColorSideNav);
     overflow-x: hidden;
     transition: 1s;
     padding-top: 4em;
