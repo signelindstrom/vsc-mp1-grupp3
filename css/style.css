@@ -183,7 +183,7 @@ footer img{
 /* -------------------- DESKTOP -------------------- */
 
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
 
     header>*{
         position: absolute;
@@ -208,6 +208,10 @@ footer img{
     nav a {
         margin: 1em;
         font-size: 1em;
+    }
+
+    header h2 a::after{
+        content: 'eather forecast';
     }
 
 }
