@@ -27,7 +27,7 @@ function getCityName(lat, long) {
     .then(locationData)
 }
 
-function locationData(location){
+function locationData(location) {
   const name = document.querySelector('#current-location');
   console.log(location[0].name)
   name.innerText = location[0].name
@@ -43,7 +43,7 @@ function getWeather(lat, long) {
     .then(weatherData)
 }
 
-function weatherData(weather){
+function weatherData(weather) {
   const temp = document.querySelector('#current-temp');
   temp.innerText = kelvinToCelsius(weather.main.temp) + ' ºC';
   console.log('Kelvin', weather.main.temp);
@@ -76,23 +76,41 @@ function weatherData(weather){
 }
 
 // get daily forecast
-function getDailyForecast(lat, long){
+function getDailyForecast(lat, long) {
   const url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=a2de5014979b69e8f9f100296b649487`;
 
   fetch(url)
-  .then(response=> response.json())
-  .then(dailyData)
+    .then(response => response.json())
+    .then(dailyData)
 }
 
-function dailyData(dailyForecast){
+// dagens datum
+const date = new Date();
+
+let day = date.getDate();
+let month = date.getMonth() + 1;
+if (month < 10) {
+  month = "0" + (date.getMonth() + 1);
+}
+let year = date.getFullYear();
+
+// This arrangement can be altered based on how we want the date's format to appear.
+let currentDate = `${year}-${month}-${day}`;
+console.log(currentDate); // "17-6-2022"
+
+function dailyData(dailyForecast) {
   // console.log(dailyForecast.list[0].dt_txt)
   dailyForecast.list.forEach(element => {
-    if (element.dt_txt.includes('12:00:00')){
-      console.log(element.dt_txt)
-      console.log(kelvinToCelsius(element.main.temp))
+    if (!(element.dt_txt.includes(`${currentDate}`))) {
+
+      if (element.dt_txt.includes('12:00:00')) {
+        console.log(element.dt_txt)
+        console.log(kelvinToCelsius(element.main.temp))
+      }
     }
   });
 }
+
 
 //if getCurrentPosition failed
 function displayError() {
@@ -100,19 +118,19 @@ function displayError() {
 }
 
 //Converts kelvins to celsius returns a number with one decimal
-function kelvinToCelsius(kelvin){
-  return Math.round((kelvin-273.15)*10)/10;
+function kelvinToCelsius(kelvin) {
+  return Math.round((kelvin - 273.15) * 10) / 10;
 }
 
-function openNav(){
-    document.querySelector('.sideNav').style.width = '95vw';
+function openNav() {
+  document.querySelector('.sideNav').style.width = '95vw';
 }
 
-function closeNav(){
+function closeNav() {
   document.querySelector('.sideNav').style.width = '0';
 }
 
-function UTCToDate(utc){
+function UTCToDate(utc) {
   let options = { hour: '2-digit', minute: '2-digit', hour12: false };
   return new Date(utc).toLocaleTimeString([], options);
 }
