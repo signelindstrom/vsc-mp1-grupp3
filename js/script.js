@@ -84,6 +84,20 @@ function getDailyForecast(lat, long){
   .then(dailyData)
 }
 
+// dagens datum
+const date = new Date();
+
+let day = date.getDate();
+let month = date.getMonth() +1;
+if (month < 10 ){
+  month = "0" + (date.getMonth() + 1);
+}
+let year = date.getFullYear();
+
+// This arrangement can be altered based on how we want the date's format to appear.
+let currentDate = `${year}-${month}-${day}`;
+console.log(currentDate); // "17-6-2022"
+
 function dailyData(dailyForecast){
   // console.log(dailyForecast.list[0].dt_txt)
   dailyForecast.list.forEach(element => {
@@ -93,6 +107,7 @@ function dailyData(dailyForecast){
     }
   });
 }
+
 
 //if getCurrentPosition failed
 function displayError() {
