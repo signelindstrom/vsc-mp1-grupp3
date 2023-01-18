@@ -77,15 +77,15 @@ function weatherData(weather){
 
 // get daily forecast
 function getDailyForecast(lat, long){
-  const url = `api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=a2de5014979b69e8f9f100296b649487`;
+  const url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=a2de5014979b69e8f9f100296b649487`;
 
   fetch(url)
-  .then(response=> response.json)
+  .then(response=> response.json())
   .then(dailyData)
 }
 
 function dailyData(dailyForecast){
-  console.log('hej')
+  console.log(dailyForecast)
 }
 
 //if getCurrentPosition failed
