@@ -114,6 +114,12 @@ function dailyData(dailyForecast) {
         const dateStringFinal = dateString[0].split('-')
         dayDate.innerText = `${dateStringFinal[2]}/${dateStringFinal[1]}`;
 
+        const dayIconContainer = document.querySelector('#day-icon-container');
+        const dayIcon = document.createElement('img');
+        dayIconContainer.appendChild(dayIcon);
+        dayIcon.src = `http://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png`;
+        console.log(element.weather[0].icon);
+
         // 4-day temp
         const tempContainer = document.querySelector('#temp-container');
         const dayTemp = document.createElement('span');
