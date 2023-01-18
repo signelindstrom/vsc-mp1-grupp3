@@ -82,7 +82,6 @@ function getDailyForecast(lat, long) {
   fetch(url)
     .then(response => response.json())
     .then(dailyData)
-    .then(hourlyData)
 }
 
 // dagens datum
@@ -123,14 +122,15 @@ function dailyData(dailyForecast) {
       }
     }
   });
+  
+  for(let i = 0; i<4; i++){
+    const timeContainer = document.querySelector('#time-container');
+    const hourlyTemp = document.createElement('span');
+    timeContainer.appendChild(hourlyTemp);
+    hourlyTemp.innerText = `${kelvinToCelsius(dailyForecast.list[i].main.temp)} ºC`
+    console.log(dailyForecast.list[i].main.temp)
+  }
 }
-
-function hourlyData(hourlyForecast){
-  hourlyForecast.list.forEach(element=>{
-    
-  })
-}
-
 
 //if getCurrentPosition failed
 function displayError() {
