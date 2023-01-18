@@ -133,16 +133,24 @@ nav .close-nav-btn {
     font-weight: 1000;
 }
 
-.local-info-container{
+.info-container{
     background-color: var(--bgColorHeadFoot);
     margin: 0 2rem 0;
     padding: 1rem;
+    margin-top: 3rem;
 }
 
-.local-info-container div{
-    text-align: center;
+.info-container div{
     display: flex;
     justify-content: space-between;
+}
+
+.info-container div span:nth-child(odd){
+    text-align: left;
+}
+
+.info-container div span:nth-child(even){
+    text-align: right;
 }
 
 /* -------------------- FOOTER -------------------- */
