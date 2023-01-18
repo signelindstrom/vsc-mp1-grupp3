@@ -111,8 +111,8 @@ function dailyData(dailyForecast) {
         const dayDate = document.createElement('span');
         dayContainer.appendChild(dayDate);
         const dateString = element.dt_txt.split(' ');
-        console.log(dateString[0])
-        dayDate.innerText = dateString[0];
+        const dateStringFinal = dateString[0].split('-')
+        dayDate.innerText = `${dateStringFinal[2]}/${dateStringFinal[1]}`;
 
         // 4-day temp
         const tempContainer = document.querySelector('#temp-container');
