@@ -99,7 +99,6 @@ let currentDate = `${year}-${month}-${day}`;
 console.log(currentDate); // "17-6-2022"
 
 function dailyData(dailyForecast) {
-  // console.log(dailyForecast.list[0].dt_txt)
   dailyForecast.list.forEach(element => {
     if (!(element.dt_txt.includes(`${currentDate}`))) {
 
@@ -107,11 +106,13 @@ function dailyData(dailyForecast) {
         console.log(element.dt_txt)
         console.log(kelvinToCelsius(element.main.temp))
 
+        // 4-day date
         const dayContainer = document.querySelector('#day-container');
         const dayDate = document.createElement('span');
         dayContainer.appendChild(dayDate);
         dayDate.innerText = element.dt_txt;
 
+        // 4-day temp
         const tempContainer = document.querySelector('#temp-container');
         const dayTemp = document.createElement('span');
         tempContainer.appendChild(dayTemp);
