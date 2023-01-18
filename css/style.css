@@ -168,6 +168,49 @@ nav .close-nav-btn {
     text-align: right;
 }
 
+
+/* -------------------- ABOUT MAIN -------------------- */
+
+#about-article{
+    /* margin: 1em;
+    padding: 1em;
+    border: 2px solid violet; */
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    gap: 2em;
+}
+
+#about-article h1{
+    font-weight: 900;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+    flex-basis: 100%;
+}
+
+#about-article section{
+    /* margin: 1em;
+    padding: 1em;
+    border: 2px solid green; */
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+
+#about-article section p{
+    flex-basis: 70%;
+}
+
+#about-article img{
+    flex-basis: 70%;
+}
+
+
+
 /* -------------------- FOOTER -------------------- */
 
 footer{
@@ -225,6 +268,17 @@ footer img{
 
     header h2 a::after{
         content: 'eather forecast';
+    }
+
+
+
+    #about-article p{
+        flex-basis: 40%;
+    }
+    
+    #about-article img{
+        flex-basis: 20%;
+        max-width: 50%;
     }
 
 }
