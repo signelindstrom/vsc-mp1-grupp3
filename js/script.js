@@ -108,7 +108,14 @@ function dailyData(dailyForecast) {
         console.log(kelvinToCelsius(element.main.temp))
 
         const dayContainer = document.querySelector('#day-container');
-        
+        const dayDate = document.createElement('span');
+        dayContainer.appendChild(dayDate);
+        dayDate.innerText = element.dt_txt;
+
+        const tempContainer = document.querySelector('#temp-container');
+        const dayTemp = document.createElement('span');
+        tempContainer.appendChild(dayTemp);
+        dayTemp.innerText = kelvinToCelsius(element.main.temp);
       }
     }
   });
