@@ -111,7 +111,7 @@ nav .close-nav-btn {
 }
 
 
-/* -------------------- MAIN -------------------- */
+/* -------------------- INDEX MAIN -------------------- */
 
 
 #index-main{
@@ -201,6 +201,35 @@ nav .close-nav-btn {
 
 /* -------------------- CONTACT MAIN -------------------- */
 
+#contact-article{
+
+    margin: 1em;
+    padding: 1em;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    gap: 3em;
+}
+
+#contact-article h1{
+    font-weight: 900;
+    text-shadow: 0px 1px, 1px 0px, 1px 1px;
+}
+
+#contact-article form{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1em;
+}
+
+#contact-article form #name, #e-mail, textarea{
+    width: 80vw;
+}
+
 
 /* -------------------- FOOTER -------------------- */
 
@@ -281,6 +310,23 @@ footer #soc-media-links{
     #about-article img{
         flex-basis: 20%;
         max-width: 40%;
+    }
+
+
+    /* -------------------- CONTACT MAIN -------------------- */
+
+    #contact-article{
+        flex-wrap: wrap;
+    }
+
+    #contact-article form #name, #e-mail, textarea{
+        width: 20vw;
+    }
+
+    #contact-article img{
+        flex-basis: 100%;
+        flex-grow: 1;
+        max-width: 20%;
     }
 
 

@@ -29,8 +29,7 @@
     </header>
 
     <main>
-        <article class="contact-articles">
-            <section class="contact-us">
+        <article id="contact-article">
                 <h1>Contact us</h1>
                 <p>If you have any questions or concerns about the weather
                     forecast, or if you need more detailed information for a
@@ -38,25 +37,26 @@
                     contact our team of meteorologists. We are here to provide
                     expert insights and support to help you make informed
                     decisions. We look forward to hearing from you.</p>
+                <form>
+                    <input type="text" id="name" placeholder="Your name" />
+                    <input type="e-mail" id="e-mail" placeholder="E-mail" />
+                    <textarea class="textarea" rows="5" cols="33" placeholder="Write to us..."></textarea>
+                    <input type="button" value="Send" id="button" />
+                </form>
                 <img src="/images/group-photo.jpeg" alt="Group photo of the team behind Weather Forecast AB"
                     width="500px">
-            </section>
         </article>
-
-        <form>
-            <input type="text" id="name" placeholder="Your name" />
-            <input type="e-mail" id="e-mail" placeholder="E-mail" />
-            <textarea class="textarea" rows="5" cols="33" placeholder="Write to us..."></textarea>
-            <input type="button" value="Send" id="button" />
-        </form>
     </main>
 
     <footer>
         <p>© 2023 Weather Forecast AB</p>
         <div id="soc-media-links">
-            <a href="https://www.facebook.com/" target=”_blank”><img src="../images/icons8-facebook.svg" alt="Facebook"></a>
-            <a href="https://www.instagram.com/" target="_blank"><img src="../images/icons8-instagram.svg" alt="Instagram"></a>
-            <a href="https://www.twitter.com/" target="_blank"><img src="../images/icons8-twitter.svg" alt="Twitter"></a>
+            <a href="https://www.facebook.com/" target=”_blank”><img src="../images/icons8-facebook.svg"
+                    alt="Facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../images/icons8-instagram.svg"
+                    alt="Instagram"></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="../images/icons8-twitter.svg"
+                    alt="Twitter"></a>
         </div>
     </footer>
 </body>
