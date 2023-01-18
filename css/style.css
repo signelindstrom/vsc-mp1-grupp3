@@ -107,6 +107,13 @@ nav .close-nav-btn {
 
 /* -------------------- MAIN -------------------- */
 
+
+main{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
 /*current weather*/
 .location-container{
     display: flex;
