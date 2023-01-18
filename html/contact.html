@@ -1,76 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../css/style.css" />
-        <link rel="shortcut icon" href="#" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
-            rel="stylesheet"
-        />
-        <script src="../js/script.js" defer></script>
-        <title>Weather forecast</title>
-    </head>
 
-    <body>
-        <header>
-            <h2><a href="../index.html">W</a></h2>
-            <span class="nav-toggler" onclick="openNav()">&#9776;</span>
-            <nav class="sideNav">
-                <a href="javascript:void(0)" class="close-nav-btn" onclick="closeNav()">&times;</a>
-                <a href="../index.html">Home</a>
-                <a href="search.html">Search</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="#" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet" />
+    <script src="../js/script.js" defer></script>
+    <title>Weather forecast</title>
+</head>
 
-        <main>
-            <article class="contact-articles">
-                <section class="contact-us">
-                    <h1>Contact us</h1>
-                    <p>If you have any questions or concerns about the weather
-                        forecast, or if you need more detailed information for a
-                        specific event or location, please do not hesitate to
-                        contact our team of meteorologists. We are here to provide
-                        expert insights and support to help you make informed
-                        decisions. We look forward to hearing from you.</p>
-                    <img src="/images/group-photo.jpeg" alt="Group photo of the team behind Weather Forecast AB" width="500px">
-                </section>
-            </article>
+<body>
+    <header>
+        <h2><a href="../index.html">W</a></h2>
+        <span class="nav-toggler" onclick="openNav()">&#9776;</span>
+        <nav class="sideNav">
+            <a href="javascript:void(0)" class="close-nav-btn" onclick="closeNav()">&times;</a>
+            <a href="../index.html">Home</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-            <form>
-                <input type="text" id="name" placeholder="Your name" />
-                <input type="e-mail" id="e-mail" placeholder="E-mail" />
-                <textarea
-                    class="textarea"
-                    rows="5"
-                    cols="33"
-                    placeholder="Write to us..."
-                ></textarea>
-                <input type="button" value="Send" id="button" />
-            </form>
-        </main>
+    <main>
+        <article class="contact-articles">
+            <section class="contact-us">
+                <h1>Contact us</h1>
+                <p>If you have any questions or concerns about the weather
+                    forecast, or if you need more detailed information for a
+                    specific event or location, please do not hesitate to
+                    contact our team of meteorologists. We are here to provide
+                    expert insights and support to help you make informed
+                    decisions. We look forward to hearing from you.</p>
+                <img src="/images/group-photo.jpeg" alt="Group photo of the team behind Weather Forecast AB"
+                    width="500px">
+            </section>
+        </article>
 
-        <footer>
-            <p>© 2023 Weather Forecast AB</p>
-            <div id="soc-media-links">
-                <!-- sparar dessa tre nedan då mellanrummet mellan ikonerna ändras när jag har gjort dem till länkar -->
-                <!-- <img src="../images/icons8-facebook.svg" alt="Facebook" />
-                <img src="../images/icons8-instagram.svg" alt="Instagram" />
-                <img src="../images/icons8-twitter.svg" alt="Twitter" /> -->
-                <a href="https://www.facebook.com/" target=”_blank”><img src="../images/icons8-facebook.svg" alt="Facebook"></a>
-                <a href="https://www.instagram.com/" target="_blank"><img src="../images/icons8-instagram.svg" alt="Instagram"></a>
-                <a href="https://www.twitter.com/" target="_blank"><img src="../images/icons8-twitter.svg" alt="Twitter"></a>
-            </div>
-        </footer>
-    </body>
+        <form>
+            <input type="text" id="name" placeholder="Your name" />
+            <input type="e-mail" id="e-mail" placeholder="E-mail" />
+            <textarea class="textarea" rows="5" cols="33" placeholder="Write to us..."></textarea>
+            <input type="button" value="Send" id="button" />
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2023 Weather Forecast AB</p>
+        <div id="soc-media-links">
+            <a href="https://www.facebook.com/" target=”_blank”><img src="../images/icons8-facebook.svg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../images/icons8-instagram.svg" alt="Instagram"></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="../images/icons8-twitter.svg" alt="Twitter"></a>
+        </div>
+    </footer>
+</body>
+
 </html>
