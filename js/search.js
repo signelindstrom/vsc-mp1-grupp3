@@ -72,7 +72,6 @@ function weatherData(weather) {
   tempFeelsLike.innerText = `${kelvinToCelsius(weather.main.feels_like)} ºC`
 }
 
-
 //if getCurrentPosition failed
 function displayError() {
   console.log('Geolocation is not supported by this browser');
