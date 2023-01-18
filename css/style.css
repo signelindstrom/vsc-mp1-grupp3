@@ -156,17 +156,9 @@ nav .close-nav-btn {
 /* -------------------- FOOTER -------------------- */
 
 footer{
-    position: absolute;
-    bottom: 0;
     width: 100vw;
     height: 5rem;
-    padding: 1em;
     background-color: var(--bgColorHeadFoot);
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-
 }
 
 footer div{
