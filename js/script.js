@@ -85,7 +85,13 @@ function getDailyForecast(lat, long){
 }
 
 function dailyData(dailyForecast){
-  console.log(dailyForecast)
+  // console.log(dailyForecast.list[0].dt_txt)
+  dailyForecast.list.forEach(element => {
+    if (element.dt_txt.includes('12:00:00')){
+      console.log(element.dt_txt)
+      console.log(kelvinToCelsius(element.main.temp))
+    }
+  });
 }
 
 //if getCurrentPosition failed
