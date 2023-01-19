@@ -186,6 +186,9 @@ nav .close-nav-btn {
     align-items: center;
 }
 
+#hourly-icon-container img{
+    width: calc(100%/4);
+}
 
 /* -------------------- ABOUT MAIN -------------------- */
 
