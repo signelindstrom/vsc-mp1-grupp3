@@ -170,38 +170,75 @@ function cityTwoInfo(newYork){
 }
 
 
-// get third city (london)
+// get third city (wellington)
 cityThree()
 function cityThree(){
-  const url = 'https://api.openweathermap.org/data/2.5/weather?q=london&appid=a2de5014979b69e8f9f100296b649487';
+  const url = 'https://api.openweathermap.org/data/2.5/weather?q=wellington&appid=a2de5014979b69e8f9f100296b649487';
 
   fetch(url)
   .then(response=> response.json())
   .then(cityThreeInfo)
 }
 
-function cityThreeInfo(london){
+function cityThreeInfo(wellington){
   const temp = document.querySelector('#current-temp3');
-  temp.innerText = kelvinToCelsius(london.main.temp) + ' ºC';
-  console.log('Kelvin', london.main.temp);
-  console.log('Celsius', kelvinToCelsius(london.main.temp));
+  temp.innerText = kelvinToCelsius(wellington.main.temp) + ' ºC';
+  console.log('Kelvin', wellington.main.temp);
+  console.log('Celsius', kelvinToCelsius(wellington.main.temp));
 
   const img = document.querySelector('#weather-icon3');
-  const icon = london.weather[0].icon
+  const icon = wellington.weather[0].icon
   img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
   // get humidity
-  console.log('Humidity ',london.main.humidity)
+  console.log('Humidity ',wellington.main.humidity)
   const humidity = document.querySelector('#humidity3');
-  humidity.innerText = `${london.main.humidity}%`;
+  humidity.innerText = `${wellington.main.humidity}%`;
 
   // get wind speed
   const wind = document.querySelector('#wind3')
-  console.log('Wind ',london.wind.speed)
-  wind.innerText = `${london.wind.speed} m/s`
+  console.log('Wind ',wellington.wind.speed)
+  wind.innerText = `${wellington.wind.speed} m/s`
 
   // get temp feels like
   const tempFeelsLike = document.querySelector('#temp-feels-like3');
-  console.log('Feels like ',kelvinToCelsius(london.main.feels_like))
-  tempFeelsLike.innerText = `${kelvinToCelsius(london.main.feels_like)} ºC`
+  console.log('Feels like ',kelvinToCelsius(wellington.main.feels_like))
+  tempFeelsLike.innerText = `${kelvinToCelsius(wellington.main.feels_like)} ºC`
+}
+
+
+// get fourth city (shanghai)
+cityFour()
+function cityFour(){
+  const url = 'https://api.openweathermap.org/data/2.5/weather?q=shanghai&appid=a2de5014979b69e8f9f100296b649487';
+
+  fetch(url)
+  .then(response=> response.json())
+  .then(cityFourInfo)
+}
+
+function cityFourInfo(shanghai){
+  const temp = document.querySelector('#current-temp4');
+  temp.innerText = kelvinToCelsius(shanghai.main.temp) + ' ºC';
+  console.log('Kelvin', shanghai.main.temp);
+  console.log('Celsius', kelvinToCelsius(shanghai.main.temp));
+
+  const img = document.querySelector('#weather-icon4');
+  const icon = shanghai.weather[0].icon
+  img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+
+  // get humidity
+  console.log('Humidity ',shanghai.main.humidity)
+  const humidity = document.querySelector('#humidity4');
+  humidity.innerText = `${shanghai.main.humidity}%`;
+
+  // get wind speed
+  const wind = document.querySelector('#wind4')
+  console.log('Wind ',shanghai.wind.speed)
+  wind.innerText = `${shanghai.wind.speed} m/s`
+
+  // get temp feels like
+  const tempFeelsLike = document.querySelector('#temp-feels-like4');
+  console.log('Feels like ',kelvinToCelsius(shanghai.main.feels_like))
+  tempFeelsLike.innerText = `${kelvinToCelsius(shanghai.main.feels_like)} ºC`
 }
