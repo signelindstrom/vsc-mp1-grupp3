@@ -4,7 +4,6 @@
 :root {
 
     --hoverGrey: hsl(230, 20%, 70%);
-    --locationIcon: hsl(240, 87%, 65%);
 
     --bgColorLightMode: hsl(186, 67%, 91%);
     --txtColorLightMode: hsl(195, 8%, 9%);
@@ -147,7 +146,7 @@ nav .close-nav-btn {
 }
 
 .location-container span{
-    color: var(--locationIcon);
+    color: var(--txtColorLightMode);
 }
 
 .current-temp-container{
@@ -486,6 +485,10 @@ footer #soc-media-links{
 
     nav {
         background-color: var(--bgColorSideNavDarkMode);
+    }
+
+    .location-container span{
+        color: var(--txtColorDarkMode);
     }
 
     .info-container, .day-forecast-container{
