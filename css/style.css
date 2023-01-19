@@ -431,6 +431,11 @@ footer #soc-media-links{
         background-color: var(--bgColorHeadFootDarkMode);
     }
 
+    header>h2>a {
+        color: var(--txtColorDarkMode);
+        background-color: var(--bgColorDarkMode);
+    }
+
     nav a {
         color: var(--txtColorDarkMode);
     }
@@ -453,6 +458,10 @@ footer #soc-media-links{
 @media (prefers-color-scheme: dark) and (min-width: 600px) {
     header h2 a::after{
         color: var(--txtColorDarkMode);
+    }
+
+    header>h2>a {
+        background-color: var(--bgColorHeadFootDarkMode);
     }
 
     nav {
