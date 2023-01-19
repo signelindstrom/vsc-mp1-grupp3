@@ -106,6 +106,15 @@ nav a:hover {
     color: var(--hoverGrey);
 }
 
+nav .active-page{
+    font-weight: 900;
+    text-shadow: 0.5px 0.5px, 0.5px 0.5px, 0.5px 0.5px;
+}
+
+nav .active-page:hover{
+    color: black;
+}
+
 nav .close-nav-btn {
     position: absolute;
     top: 0;
