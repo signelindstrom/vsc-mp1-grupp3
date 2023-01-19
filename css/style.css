@@ -410,6 +410,10 @@ footer #soc-media-links{
         width: auto;
     }
 
+    .material-symbols-outlined {
+        font-size: 48px;
+    }
+
     /* -------------------- ABOUT MAIN -------------------- */
 
     #about-article h1{
