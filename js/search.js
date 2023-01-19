@@ -2,13 +2,12 @@
 const searchInput = document.getElementById('city-search-input');
 const searchBtn = document.getElementById('city-search-button');
 const searchInfoContainer = document.querySelector('.info-container');
-searchInfoContainer.style.display = 'none';
 
-searchBtn.addEventListener('click', e =>{
-    e.preventDefault();
-    const searchValue = searchInput.value.toLowerCase();
-    console.log(searchValue);
-    getCity(searchValue);
+searchBtn.addEventListener('click', e => {
+  e.preventDefault();
+  const searchValue = searchInput.value.toLowerCase();
+  console.log(searchValue);
+  getCity(searchValue);
 });
 
 
@@ -21,20 +20,17 @@ function getCity(city) {
     .then(getCityData);
 }
 
-function getCityData(cityData){
-    console.log(cityData);
-    const cityLat = cityData.coord.lat;
-    const cityLon = cityData.coord.lon;
-    const cityName = cityData.name;
 
-    const cityNameTag = document.getElementById('city-name');
-    cityNameTag.innerText = cityName;
+function getCityData(cityData) {
+  console.log(cityData);
+  const cityLat = cityData.coord.lat;
+  const cityLon = cityData.coord.lon;
+  const cityName = cityData.name;
 
-    console.log('Name', cityName);
-    console.log('Lat ',cityLat);
-    console.log('Lon ',cityLon)
-    getWeather(cityLat, cityLon);
-    searchInfoContainer.style.display = 'block';
+  console.log('Name', cityName);
+  console.log('Lat ', cityLat);
+  console.log('Lon ', cityLon)
+  getWeather(cityLat, cityLon);
 }
 
 // get weather data
@@ -47,29 +43,62 @@ function getWeather(lat, long) {
 }
 
 function weatherData(weather) {
-  const temp = document.querySelector('#current-temp');
-  temp.innerText = kelvinToCelsius(weather.main.temp) + ' ºC';
-  console.log('Kelvin', weather.main.temp);
-  console.log('Celsius', kelvinToCelsius(weather.main.temp));
+  // make divs
+  const cityDiv = document.querySelector('#city-container');
+  const infoDiv = document.createElement('div');
+  cityDiv.prepend(infoDiv)
+  infoDiv.classList.add("info-container")
+  const searchBoxDiv = document.createElement('div');
+  infoDiv.appendChild(searchBoxDiv);
+  searchBoxDiv.classList.add("search-box");
 
-  const img = document.querySelector('#weather-icon');
+  // get city name
+  const cityName = document.createElement('h4');
+  searchBoxDiv.appendChild(cityName);
+  let cityNameCorrection = searchInput.value;
+  const cityNameUpperCase = cityNameCorrection.charAt(0).toUpperCase() + cityNameCorrection.slice(1);
+  cityName.innerText = cityNameUpperCase;
+
+  // get temp
+  const temp = document.createElement('h3');
+  searchBoxDiv.appendChild(temp);
+  temp.innerText = kelvinToCelsius(weather.main.temp) + ' ºC';
+
+  // get icon
+  const img = document.createElement('img');
+  searchBoxDiv.appendChild(img);
   const icon = weather.weather[0].icon
   img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
+  // get feels like
+  const feelsLikeDiv = document.createElement('div');
+  infoDiv.appendChild(feelsLikeDiv);
+  const feelsLikeSpanText = document.createElement('span');
+  feelsLikeDiv.appendChild(feelsLikeSpanText);
+  feelsLikeSpanText.innerText = 'Feels like';
+  const feelsLikeSpanTemp = document.createElement('span');
+  feelsLikeDiv.appendChild(feelsLikeSpanTemp);
+  feelsLikeSpanTemp.innerText = `${kelvinToCelsius(weather.main.feels_like)} ºC`;
+
   // get humidity
-  console.log('Humidity ',weather.main.humidity)
-  const humidity = document.querySelector('#humidity');
-  humidity.innerText = `${weather.main.humidity}%`;
+  const humidityDiv = document.createElement('div');
+  infoDiv.appendChild(humidityDiv);
+  const humidityText = document.createElement('span');
+  humidityDiv.appendChild(humidityText);
+  humidityText.innerText = 'Humidity';
+  const humidityPercentage = document.createElement('span');
+  humidityDiv.appendChild(humidityPercentage);
+  humidityPercentage.innerText = `${weather.main.humidity}%`;
 
   // get wind speed
-  const wind = document.querySelector('#wind')
-  console.log('Wind ',weather.wind.speed)
-  wind.innerText = `${weather.wind.speed} m/s`
-
-  // get temp feels like
-  const tempFeelsLike = document.querySelector('#temp-feels-like');
-  console.log('Feels like ',kelvinToCelsius(weather.main.feels_like))
-  tempFeelsLike.innerText = `${kelvinToCelsius(weather.main.feels_like)} ºC`
+  const windDiv = document.createElement('div');
+  infoDiv.appendChild(windDiv);
+  const windText = document.createElement('span');
+  windDiv.appendChild(windText);
+  windText.innerText = 'Wind';
+  const windSpeed = document.createElement('span');
+  windDiv.appendChild(windSpeed);
+  windSpeed.innerText = `${weather.wind.speed} m/s`;
 }
 
 //if getCurrentPosition failed
@@ -98,15 +127,15 @@ function UTCToDate(utc) {
 
 // get first city (paris)
 cityOne()
-function cityOne(){
+function cityOne() {
   const url = 'https://api.openweathermap.org/data/2.5/weather?q=paris&appid=a2de5014979b69e8f9f100296b649487';
 
   fetch(url)
-  .then(response=> response.json())
-  .then(cityOneInfo)
+    .then(response => response.json())
+    .then(cityOneInfo)
 }
 
-function cityOneInfo(paris){
+function cityOneInfo(paris) {
   const temp = document.querySelector('#current-temp1');
   temp.innerText = kelvinToCelsius(paris.main.temp) + ' ºC';
   console.log('Kelvin', paris.main.temp);
@@ -117,33 +146,33 @@ function cityOneInfo(paris){
   img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
   // get humidity
-  console.log('Humidity ',paris.main.humidity)
+  console.log('Humidity ', paris.main.humidity)
   const humidity = document.querySelector('#humidity1');
   humidity.innerText = `${paris.main.humidity}%`;
 
   // get wind speed
   const wind = document.querySelector('#wind1')
-  console.log('Wind ',paris.wind.speed)
+  console.log('Wind ', paris.wind.speed)
   wind.innerText = `${paris.wind.speed} m/s`
 
   // get temp feels like
   const tempFeelsLike = document.querySelector('#temp-feels-like1');
-  console.log('Feels like ',kelvinToCelsius(paris.main.feels_like))
+  console.log('Feels like ', kelvinToCelsius(paris.main.feels_like))
   tempFeelsLike.innerText = `${kelvinToCelsius(paris.main.feels_like)} ºC`
 }
 
 
 // get second city (new york)
 cityTwo()
-function cityTwo(){
+function cityTwo() {
   const url = 'https://api.openweathermap.org/data/2.5/weather?q=new%20york&appid=a2de5014979b69e8f9f100296b649487';
 
   fetch(url)
-  .then(response=> response.json())
-  .then(cityTwoInfo)
+    .then(response => response.json())
+    .then(cityTwoInfo)
 }
 
-function cityTwoInfo(newYork){
+function cityTwoInfo(newYork) {
   const temp = document.querySelector('#current-temp2');
   temp.innerText = kelvinToCelsius(newYork.main.temp) + ' ºC';
   console.log('Kelvin', newYork.main.temp);
@@ -154,33 +183,33 @@ function cityTwoInfo(newYork){
   img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
   // get humidity
-  console.log('Humidity ',newYork.main.humidity)
+  console.log('Humidity ', newYork.main.humidity)
   const humidity = document.querySelector('#humidity2');
   humidity.innerText = `${newYork.main.humidity}%`;
 
   // get wind speed
   const wind = document.querySelector('#wind2')
-  console.log('Wind ',newYork.wind.speed)
+  console.log('Wind ', newYork.wind.speed)
   wind.innerText = `${newYork.wind.speed} m/s`
 
   // get temp feels like
   const tempFeelsLike = document.querySelector('#temp-feels-like2');
-  console.log('Feels like ',kelvinToCelsius(newYork.main.feels_like))
+  console.log('Feels like ', kelvinToCelsius(newYork.main.feels_like))
   tempFeelsLike.innerText = `${kelvinToCelsius(newYork.main.feels_like)} ºC`
 }
 
 
 // get third city (wellington)
 cityThree()
-function cityThree(){
+function cityThree() {
   const url = 'https://api.openweathermap.org/data/2.5/weather?q=wellington&appid=a2de5014979b69e8f9f100296b649487';
 
   fetch(url)
-  .then(response=> response.json())
-  .then(cityThreeInfo)
+    .then(response => response.json())
+    .then(cityThreeInfo)
 }
 
-function cityThreeInfo(wellington){
+function cityThreeInfo(wellington) {
   const temp = document.querySelector('#current-temp3');
   temp.innerText = kelvinToCelsius(wellington.main.temp) + ' ºC';
   console.log('Kelvin', wellington.main.temp);
@@ -191,33 +220,33 @@ function cityThreeInfo(wellington){
   img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
   // get humidity
-  console.log('Humidity ',wellington.main.humidity)
+  console.log('Humidity ', wellington.main.humidity)
   const humidity = document.querySelector('#humidity3');
   humidity.innerText = `${wellington.main.humidity}%`;
 
   // get wind speed
   const wind = document.querySelector('#wind3')
-  console.log('Wind ',wellington.wind.speed)
+  console.log('Wind ', wellington.wind.speed)
   wind.innerText = `${wellington.wind.speed} m/s`
 
   // get temp feels like
   const tempFeelsLike = document.querySelector('#temp-feels-like3');
-  console.log('Feels like ',kelvinToCelsius(wellington.main.feels_like))
+  console.log('Feels like ', kelvinToCelsius(wellington.main.feels_like))
   tempFeelsLike.innerText = `${kelvinToCelsius(wellington.main.feels_like)} ºC`
 }
 
 
 // get fourth city (shanghai)
 cityFour()
-function cityFour(){
+function cityFour() {
   const url = 'https://api.openweathermap.org/data/2.5/weather?q=shanghai&appid=a2de5014979b69e8f9f100296b649487';
 
   fetch(url)
-  .then(response=> response.json())
-  .then(cityFourInfo)
+    .then(response => response.json())
+    .then(cityFourInfo)
 }
 
-function cityFourInfo(shanghai){
+function cityFourInfo(shanghai) {
   const temp = document.querySelector('#current-temp4');
   temp.innerText = kelvinToCelsius(shanghai.main.temp) + ' ºC';
   console.log('Kelvin', shanghai.main.temp);
@@ -228,17 +257,17 @@ function cityFourInfo(shanghai){
   img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
   // get humidity
-  console.log('Humidity ',shanghai.main.humidity)
+  console.log('Humidity ', shanghai.main.humidity)
   const humidity = document.querySelector('#humidity4');
   humidity.innerText = `${shanghai.main.humidity}%`;
 
   // get wind speed
   const wind = document.querySelector('#wind4')
-  console.log('Wind ',shanghai.wind.speed)
+  console.log('Wind ', shanghai.wind.speed)
   wind.innerText = `${shanghai.wind.speed} m/s`
 
   // get temp feels like
   const tempFeelsLike = document.querySelector('#temp-feels-like4');
-  console.log('Feels like ',kelvinToCelsius(shanghai.main.feels_like))
+  console.log('Feels like ', kelvinToCelsius(shanghai.main.feels_like))
   tempFeelsLike.innerText = `${kelvinToCelsius(shanghai.main.feels_like)} ºC`
 }
