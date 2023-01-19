@@ -6,7 +6,6 @@ const searchInfoContainer = document.querySelector('.info-container');
 searchBtn.addEventListener('click', e => {
   e.preventDefault();
   const searchValue = searchInput.value.toLowerCase();
-  console.log(searchValue);
   getCity(searchValue);
 });
 
@@ -26,12 +25,9 @@ function getCity(city) {
 
 
 function getCityData(cityData) {
-  console.log(cityData);
   const cityLat = cityData.coord.lat;
   const cityLon = cityData.coord.lon;
 
-  console.log('Lat ', cityLat);
-  console.log('Lon ', cityLon)
   getWeather(cityLat, cityLon, cityData);
 }
 
