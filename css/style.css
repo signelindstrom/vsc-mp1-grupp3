@@ -4,7 +4,7 @@
 :root {
 
     --hoverGrey: hsl(230, 20%, 70%);
-    --accentBlue: hsl(240, 87%, 65%);
+    --locationIcon: hsl(240, 87%, 65%);
 
     --bgColorLightMode: hsl(186, 67%, 91%);
     --txtColorLightMode: hsl(195, 8%, 9%);
@@ -129,7 +129,7 @@ nav .close-nav-btn {
 }
 
 .location-container span{
-    color: var(--accentBlue);
+    color: var(--locationIcon);
 }
 
 .current-temp-container{
@@ -157,15 +157,22 @@ nav .close-nav-btn {
 
 .info-container div{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
-.info-container div span:nth-child(odd){
-    text-align: left;
+.day-forecast-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    margin: 2rem 2rem 2rem;
+    background-color: var(--bgColorHeadFoot);
 }
 
-.info-container div span:nth-child(even){
-    text-align: right;
+.day-forecast-container div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 
