@@ -394,3 +394,11 @@ footer #soc-media-links{
     }
 
 }
+
+/* -------------------- DARK MODE -------------------- */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #000000;
+    }
+}
