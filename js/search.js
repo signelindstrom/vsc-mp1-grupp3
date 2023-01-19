@@ -168,3 +168,40 @@ function cityTwoInfo(newYork){
   console.log('Feels like ',kelvinToCelsius(newYork.main.feels_like))
   tempFeelsLike.innerText = `${kelvinToCelsius(newYork.main.feels_like)} ºC`
 }
+
+
+// get third city (london)
+cityThree()
+function cityThree(){
+  const url = 'https://api.openweathermap.org/data/2.5/weather?q=london&appid=a2de5014979b69e8f9f100296b649487';
+
+  fetch(url)
+  .then(response=> response.json())
+  .then(cityThreeInfo)
+}
+
+function cityThreeInfo(london){
+  const temp = document.querySelector('#current-temp3');
+  temp.innerText = kelvinToCelsius(london.main.temp) + ' ºC';
+  console.log('Kelvin', london.main.temp);
+  console.log('Celsius', kelvinToCelsius(london.main.temp));
+
+  const img = document.querySelector('#weather-icon3');
+  const icon = london.weather[0].icon
+  img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+
+  // get humidity
+  console.log('Humidity ',london.main.humidity)
+  const humidity = document.querySelector('#humidity3');
+  humidity.innerText = `${london.main.humidity}%`;
+
+  // get wind speed
+  const wind = document.querySelector('#wind3')
+  console.log('Wind ',london.wind.speed)
+  wind.innerText = `${london.wind.speed} m/s`
+
+  // get temp feels like
+  const tempFeelsLike = document.querySelector('#temp-feels-like3');
+  console.log('Feels like ',kelvinToCelsius(london.main.feels_like))
+  tempFeelsLike.innerText = `${kelvinToCelsius(london.main.feels_like)} ºC`
+}
