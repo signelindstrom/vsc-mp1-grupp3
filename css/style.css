@@ -157,7 +157,7 @@ nav .close-nav-btn {
 }
 
 .current-temp-container img{
-    width: 25vw;
+    width: 20vw;
 }
 
 .current-temp-container h3{
@@ -408,6 +408,10 @@ footer #soc-media-links{
 
     .material-symbols-outlined {
         font-size: 48px;
+    }
+
+    .current-temp-container img{
+        width: 10vw;
     }
 
     /* -------------------- ABOUT MAIN -------------------- */
