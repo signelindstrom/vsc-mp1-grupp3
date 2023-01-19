@@ -22,7 +22,7 @@
         <nav class="sideNav">
             <a href="javascript:void(0)" class="close-nav-btn" onclick="closeNav()">&times;</a>
             <a href="../index.html">Home</a>
-            <a href="search.html">Search</a>
+            <a class="active-page" href="search.html">Search</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -39,7 +39,7 @@
     </article>
 
     <article class="search-page-articles" id="city-container">
-        <div class="info-container" id="city-one">
+        <div class="info-container" id="city-search-name">
             <div class="search-box">
                 <h4><b id="city-name"></b></h4>
                 <img id="weather-icon" src="#" alt="Weather-icon">
@@ -50,18 +50,18 @@
             <div><span>Wind</span><span id="wind"></span></div>
         </div>
 
-        <div class="info-container" id="city-two">
+        <div class="info-container" id="city-one">
             <div class="search-box">
-                <h4><b id="city-name2">Paris</b></h4>
-                <img id="weather-icon2" src="#" alt="Weather-icon">
-                <h3 id="current-temp2">15°</h3>
+                <h4><b id="city-name1">Paris</b></h4>
+                <img id="weather-icon1" src="#" alt="Weather-icon">
+                <h3 id="current-temp1"></h3>
             </div>
-            <div><span>Feels like</span><span id="temp-feels-like2">15°</span></div>
-            <div><span>Humidity</span><span id="humidity2">88%</span></div>
-            <div><span>Wind</span><span id="wind2">7 m/s</span></div>
+            <div><span>Feels like</span><span id="temp-feels-like1"></span></div>
+            <div><span>Humidity</span><span id="humidity1"></span></div>
+            <div><span>Wind</span><span id="wind1"></span></div>
         </div>
 
-        <div class="info-container" id="city-three">
+        <div class="info-container" id="city-two">
             <div class="search-box">
                 <h4><b id="city-name3">New York</b></h4>
                 <img id="weather-icon3" src="#" alt="Weather-icon">
@@ -72,7 +72,7 @@
             <div><span>Wind</span><span id="wind3">7 m/s</span></div>
         </div>
 
-        <div class="info-container" id="city-four">
+        <div class="info-container" id="city-three">
             <div class="search-box">
                 <h4><b id="city-name4">London</b></h4>
                 <img id="weather-icon4" src="#" alt="Weather-icon">

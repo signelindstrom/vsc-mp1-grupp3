@@ -94,3 +94,39 @@ function UTCToDate(utc) {
   let options = { hour: '2-digit', minute: '2-digit', hour12: false };
   return new Date(utc).toLocaleTimeString([], options);
 }
+
+// get first city (paris)
+cityOne()
+function cityOne(){
+  const url = 'https://api.openweathermap.org/data/2.5/weather?q=paris&appid=a2de5014979b69e8f9f100296b649487';
+
+  fetch(url)
+  .then(response=> response.json())
+  .then(cityOneInfo)
+}
+
+function cityOneInfo(paris){
+  const temp = document.querySelector('#current-temp1');
+  temp.innerText = kelvinToCelsius(paris.main.temp) + ' ºC';
+  console.log('Kelvin', paris.main.temp);
+  console.log('Celsius', kelvinToCelsius(paris.main.temp));
+
+  const img = document.querySelector('#weather-icon1');
+  const icon = paris.weather[0].icon
+  img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+
+  // get humidity
+  console.log('Humidity ',paris.main.humidity)
+  const humidity = document.querySelector('#humidity1');
+  humidity.innerText = `${paris.main.humidity}%`;
+
+  // get wind speed
+  const wind = document.querySelector('#wind1')
+  console.log('Wind ',paris.wind.speed)
+  wind.innerText = `${paris.wind.speed} m/s`
+
+  // get temp feels like
+  const tempFeelsLike = document.querySelector('#temp-feels-like1');
+  console.log('Feels like ',kelvinToCelsius(paris.main.feels_like))
+  tempFeelsLike.innerText = `${kelvinToCelsius(paris.main.feels_like)} ºC`
+}
