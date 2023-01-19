@@ -363,6 +363,7 @@ footer #soc-media-links{
 
     header h2 a::after{
         content: 'eather forecast';
+        color: var(--txtColorLightMode);
     }
 
 
@@ -435,5 +436,11 @@ footer #soc-media-links{
 
     footer {
         background-color: var(--bgColorHeadFootDarkMode);
+    }
+}
+
+@media (prefers-color-scheme: dark) and (min-width: 600px) {
+    header h2 a::after{
+        color: var(--txtColorDarkMode);
     }
 }
