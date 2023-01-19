@@ -96,7 +96,7 @@ nav a {
     margin-right: 1em;
     text-decoration: none;
     font-size: 25px;
-    color: black;
+    color: var(--txtColorLightMode);
     display: block;
     transition: 0.3s;
 
@@ -112,7 +112,7 @@ nav .active-page{
 }
 
 nav .active-page:hover{
-    color: black;
+    color: var(--txtColorLightMode);
 }
 
 nav .close-nav-btn {
@@ -477,12 +477,16 @@ footer #soc-media-links{
         color: var(--txtColorDarkMode);
     }
 
-    .info-container, .day-forecast-container{
-        background-color: var(--bgColorHeadFootDarkMode);
+    nav .active-page:hover{
+        color: var(--txtColorDarkMode);
     }
 
     nav {
         background-color: var(--bgColorSideNavDarkMode);
+    }
+
+    .info-container, .day-forecast-container{
+        background-color: var(--bgColorHeadFootDarkMode);
     }
 
     footer {
