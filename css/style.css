@@ -43,7 +43,7 @@ img {
 header {
     position: sticky;
     top: 0;
-    width: 100vw;
+    width: 100%;
     height: 5rem;
     padding: 1em;
     background-color: var(--bgColorHeadFoot);
@@ -335,7 +335,7 @@ button{
 /* -------------------- FOOTER -------------------- */
 
 footer{
-    width: 100vw;
+    width: 100%;
     height: 5rem;
     padding: 1em;
     background-color: var(--bgColorHeadFoot);
@@ -401,7 +401,7 @@ footer #soc-media-links{
 
     /* -------------------- INDEX  -------------------- */
     .index-main{
-        flex-basis: 20%;
+        flex-basis: 50%;
     }
 
     .weather-section{
@@ -450,10 +450,6 @@ footer #soc-media-links{
         margin-right: 2em;
     }
 
-}
-
-@media screen and (max-width: 800px) {
-    
 }
 
 /* -------------------- DARK MODE -------------------- */
