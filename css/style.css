@@ -12,12 +12,11 @@
     --bgColorDarkMode: hsl(217, 33%, 16%);
     --txtColorDarkMode: hsl(196, 27%, 92%);
 
-    --bgColorHeadFoot: hsl(186, 67%, 95%);
+    --bgColorHeadFoot: hsl(187, 68%, 95%);
     --bgColorSideNav: hsl(0, 0%, 100%, 0.8);
 
     --bgColorHeadFootDarkMode: hsl(217, 33%, 8%);
     --bgColorSideNavDarkMode: hsl(217, 33%, 8%, 0.8);
-
 }
 
 * {
