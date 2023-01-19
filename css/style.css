@@ -9,11 +9,13 @@
     --bgColorLightMode: hsl(186, 67%, 91%);
     --txtColorLightMode: hsl(195, 8%, 9%);
 
-    --bgColorDarkMode: hsl(0, 0%, 12%);
+    --bgColorDarkMode: hsl(217, 33%, 16%);
     --txtColorDarkMode: hsl(196, 27%, 92%);
 
     --bgColorHeadFoot: hsl(186, 67%, 95%);
     --bgColorSideNav: hsl(0, 0%, 100%, 0.8);
+
+    --bgColorHeadFootDarkMode: hsl(217, 33%, 8%);
 }
 
 * {
@@ -27,6 +29,7 @@
 
 body {
     background-color: var(--bgColorLightMode);
+    color: var(--txtColorLightMode);
 }
 
 img {
@@ -406,6 +409,23 @@ footer #soc-media-links{
 
 @media (prefers-color-scheme: dark) {
     body {
-        background: #000000;
+        background-color: var(--bgColorDarkMode);
+        color: var(--txtColorDarkMode);
+    }
+
+    header {
+        background-color: var(--bgColorHeadFootDarkMode);
+    }
+
+    nav a {
+        color: var(--txtColorDarkMode);
+    }
+
+    .info-container{
+        background-color: var(--bgColorHeadFootDarkMode);
+    }
+
+    footer {
+        background-color: var(--bgColorHeadFootDarkMode);
     }
 }
