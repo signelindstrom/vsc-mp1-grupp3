@@ -9,11 +9,13 @@
     --bgColorLightMode: hsl(186, 67%, 91%);
     --txtColorLightMode: hsl(195, 8%, 9%);
 
-    --bgColorDarkMode: hsl(0, 0%, 12%);
+    --bgColorDarkMode: hsl(217, 33%, 16%);
     --txtColorDarkMode: hsl(196, 27%, 92%);
 
     --bgColorHeadFoot: hsl(186, 67%, 95%);
     --bgColorSideNav: hsl(0, 0%, 100%, 0.8);
+
+    --bgColorHeadFootDarkMode: hsl(217, 33%, 8%);
 }
 
 * {
@@ -401,5 +403,9 @@ footer #soc-media-links{
 @media (prefers-color-scheme: dark) {
     body {
         background-color: var(--bgColorDarkMode);
+    }
+
+    header {
+        background-color: var(--bgColorHeadFootDarkMode);
     }
 }
