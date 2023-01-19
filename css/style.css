@@ -160,7 +160,15 @@ nav .close-nav-btn {
 
 .info-container div{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+.info-container div span:nth-child(odd){
+    text-align: left;
+}
+
+.info-container div span:nth-child(even){
+    text-align: right;
 }
 
 .day-forecast-container{
