@@ -131,6 +131,7 @@ nav .close-nav-btn {
     flex-flow: row wrap;
     justify-content: space-evenly;
     flex-basis: 100%;
+    margin-top: 4rem;
 }
 
 /*current weather*/
@@ -400,7 +401,7 @@ footer #soc-media-links{
 
     /* -------------------- INDEX  -------------------- */
     .index-main{
-        flex-basis: 40%;
+        flex-basis: 20%;
     }
 
     .weather-section{
@@ -449,6 +450,10 @@ footer #soc-media-links{
         margin-right: 2em;
     }
 
+}
+
+@media screen and (max-width: 800px) {
+    
 }
 
 /* -------------------- DARK MODE -------------------- */
