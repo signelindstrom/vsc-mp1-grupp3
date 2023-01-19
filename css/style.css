@@ -406,6 +406,11 @@ footer #soc-media-links{
         width: auto;
     }
 
+    #more-info {
+        margin-left: 0;
+        width: 100%;
+    }
+
     .material-symbols-outlined {
         font-size: 48px;
     }
