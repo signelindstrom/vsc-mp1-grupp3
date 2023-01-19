@@ -205,18 +205,19 @@ nav .close-nav-btn {
     gap: 2em;
 }
 
+#about-article section{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    gap: 2em;
+}
+
 #about-article h1{
     font-weight: 900;
     text-shadow: 0px 1px, 1px 0px, 1px 1px;
     flex-basis: 100%;
-}
-
-#about-article p{
-    flex-basis: 80%;
-}
-
-#about-article img{
-    flex-basis: 70%;
 }
 
 
@@ -381,10 +382,12 @@ footer #soc-media-links{
     }
     
     #about-article img{
-        flex-basis: 20%;
         max-width: 40%;
     }
 
+    #about-article #about-section2{
+        flex-direction: row-reverse;
+    }
 
     /* -------------------- CONTACT MAIN -------------------- */
 
