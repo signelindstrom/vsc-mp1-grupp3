@@ -5,16 +5,16 @@
 
     --hoverGrey: hsl(230, 20%, 70%);
 
-    --bgColorLightMode: hsl(186, 67%, 91%);
-    --txtColorLightMode: hsl(195, 8%, 9%);
+    --bgColorLightMode: hsl(186, 65%, 91%);
+    --txtColorLightMode: hsl(195, 9%, 9%);
 
-    --bgColorDarkMode: hsl(217, 33%, 16%);
+    --bgColorDarkMode: hsl(216, 33%, 16%);
     --txtColorDarkMode: hsl(196, 27%, 92%);
 
     --bgColorHeadFoot: hsl(187, 68%, 95%);
     --bgColorSideNav: hsl(0, 0%, 100%, 0.8);
 
-    --bgColorHeadFootDarkMode: hsl(217, 33%, 8%);
+    --bgColorHeadFootDarkMode: hsl(217, 32%, 8%);
     --bgColorSideNavDarkMode: hsl(217, 33%, 8%, 0.8);
 }
 
