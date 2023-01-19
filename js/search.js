@@ -95,6 +95,7 @@ function UTCToDate(utc) {
   return new Date(utc).toLocaleTimeString([], options);
 }
 
+
 // get first city (paris)
 cityOne()
 function cityOne(){
@@ -129,4 +130,41 @@ function cityOneInfo(paris){
   const tempFeelsLike = document.querySelector('#temp-feels-like1');
   console.log('Feels like ',kelvinToCelsius(paris.main.feels_like))
   tempFeelsLike.innerText = `${kelvinToCelsius(paris.main.feels_like)} ºC`
+}
+
+
+// get second city (new york)
+cityTwo()
+function cityTwo(){
+  const url = 'https://api.openweathermap.org/data/2.5/weather?q=new%20york&appid=a2de5014979b69e8f9f100296b649487';
+
+  fetch(url)
+  .then(response=> response.json())
+  .then(cityTwoInfo)
+}
+
+function cityTwoInfo(newYork){
+  const temp = document.querySelector('#current-temp2');
+  temp.innerText = kelvinToCelsius(newYork.main.temp) + ' ºC';
+  console.log('Kelvin', newYork.main.temp);
+  console.log('Celsius', kelvinToCelsius(newYork.main.temp));
+
+  const img = document.querySelector('#weather-icon2');
+  const icon = newYork.weather[0].icon
+  img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+
+  // get humidity
+  console.log('Humidity ',newYork.main.humidity)
+  const humidity = document.querySelector('#humidity2');
+  humidity.innerText = `${newYork.main.humidity}%`;
+
+  // get wind speed
+  const wind = document.querySelector('#wind2')
+  console.log('Wind ',newYork.wind.speed)
+  wind.innerText = `${newYork.wind.speed} m/s`
+
+  // get temp feels like
+  const tempFeelsLike = document.querySelector('#temp-feels-like2');
+  console.log('Feels like ',kelvinToCelsius(newYork.main.feels_like))
+  tempFeelsLike.innerText = `${kelvinToCelsius(newYork.main.feels_like)} ºC`
 }
