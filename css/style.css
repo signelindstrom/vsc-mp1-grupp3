@@ -54,7 +54,7 @@ header>h2>a {
     text-align: center;
     font-size: 2em;
     text-decoration: none;
-    color: black;
+    color: var(--txtColorLightMode);
     background-color: hsl(0, 0%, 100%, 0.8);
     border-radius: 50%;
     width: 6vw;
@@ -421,7 +421,7 @@ footer #soc-media-links{
         color: var(--txtColorDarkMode);
     }
 
-    .info-container{
+    .info-container, .day-forecast-container, nav{
         background-color: var(--bgColorHeadFootDarkMode);
     }
 
