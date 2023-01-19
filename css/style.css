@@ -59,7 +59,7 @@ header>h2>a {
     color: var(--txtColorLightMode);
     background-color: hsl(0, 0%, 100%, 0.8);
     border-radius: 50%;
-    width: 6vw;
+    /* width: 6vw; */
 }
 
 header>span {
@@ -382,15 +382,18 @@ footer #soc-media-links{
         justify-content: flex-end;
         padding: 0;
         margin: 0;
+        z-index: -1;
     }
 
     nav a {
         margin: 1em;
         font-size: .9em;
+        z-index: 1;
     }
 
     header h2 a{
         background-color: var(--bgColorHeadFoot);
+        z-index: 2;
     }
 
     header h2 a::after{
