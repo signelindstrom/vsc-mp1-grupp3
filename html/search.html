@@ -27,8 +27,8 @@
             <a href="contact.html">Contact</a>
         </nav>
     </header>
-
-    <article class="search-container">
+    <main>
+        <article class="search-container">
             <h3>Search for a city to get the weather forecast</h3>
             <form action="">
                 <span class="search-bar">
@@ -36,71 +36,74 @@
                 </span>
                 <button id="city-search-button">Search</button>
             </form>
-    </article>
+        </article>
 
-    <article class="search-page-articles" id="city-container">
-        <div class="info-container" id="city-search-name">
-            <div class="search-box">
-                <h4><b id="city-name"></b></h4>
-                <img id="weather-icon" src="#" alt="Weather-icon">
-                <h3 id="current-temp"></h3>
+        <article class="search-page-articles" id="city-container">
+            <div class="info-container" id="city-search-name">
+                <div class="search-box">
+                    <h4><b id="city-name"></b></h4>
+                    <img id="weather-icon" src="#" alt="Weather-icon">
+                    <h3 id="current-temp"></h3>
+                </div>
+                <div><span>Feels like</span><span id="temp-feels-like"></span></div>
+                <div><span>Humidity</span><span id="humidity"></span></div>
+                <div><span>Wind</span><span id="wind"></span></div>
             </div>
-            <div><span >Feels like</span><span id="temp-feels-like"></span></div>
-            <div><span>Humidity</span><span id="humidity"></span></div>
-            <div><span>Wind</span><span id="wind"></span></div>
-        </div>
 
-        <div class="info-container" id="city-one">
-            <div class="search-box">
-                <h4><b id="city-name1">Paris</b></h4>
-                <img id="weather-icon1" src="#" alt="Weather-icon">
-                <h3 id="current-temp1"></h3>
+            <div class="info-container" id="city-one">
+                <div class="search-box">
+                    <h4><b id="city-name1">Paris</b></h4>
+                    <img id="weather-icon1" src="#" alt="Weather-icon">
+                    <h3 id="current-temp1"></h3>
+                </div>
+                <div><span>Feels like</span><span id="temp-feels-like1"></span></div>
+                <div><span>Humidity</span><span id="humidity1"></span></div>
+                <div><span>Wind</span><span id="wind1"></span></div>
             </div>
-            <div><span>Feels like</span><span id="temp-feels-like1"></span></div>
-            <div><span>Humidity</span><span id="humidity1"></span></div>
-            <div><span>Wind</span><span id="wind1"></span></div>
-        </div>
 
-        <div class="info-container" id="city-two">
-            <div class="search-box">
-                <h4><b id="city-name2">New York</b></h4>
-                <img id="weather-icon2" src="#" alt="Weather-icon">
-                <h3 id="current-temp2"></h3>
+            <div class="info-container" id="city-two">
+                <div class="search-box">
+                    <h4><b id="city-name2">New York</b></h4>
+                    <img id="weather-icon2" src="#" alt="Weather-icon">
+                    <h3 id="current-temp2"></h3>
+                </div>
+                <div><span>Feels like</span><span id="temp-feels-like2"></span></div>
+                <div><span>Humidity</span><span id="humidity2"></span></div>
+                <div><span>Wind</span><span id="wind2"></span></div>
             </div>
-            <div><span>Feels like</span><span id="temp-feels-like2"></span></div>
-            <div><span>Humidity</span><span id="humidity2"></span></div>
-            <div><span>Wind</span><span id="wind2"></span></div>
-        </div>
 
-        <div class="info-container" id="city-three">
-            <div class="search-box">
-                <h4><b id="city-name3">Wellington</b></h4>
-                <img id="weather-icon3" src="#" alt="Weather-icon">
-                <h3 id="current-temp3">°</h3>
+            <div class="info-container" id="city-three">
+                <div class="search-box">
+                    <h4><b id="city-name3">Wellington</b></h4>
+                    <img id="weather-icon3" src="#" alt="Weather-icon">
+                    <h3 id="current-temp3">°</h3>
+                </div>
+                <div><span>Feels like</span><span id="temp-feels-like3"></span></div>
+                <div><span>Humidity</span><span id="humidity3"></span></div>
+                <div><span>Wind</span><span id="wind3"></span></div>
             </div>
-            <div><span>Feels like</span><span id="temp-feels-like3"></span></div>
-            <div><span>Humidity</span><span id="humidity3"></span></div>
-            <div><span>Wind</span><span id="wind3"></span></div>
-        </div>
 
-        <div class="info-container" id="city-four">
-            <div class="search-box">
-                <h4><b id="city-name4">Shanghai</b></h4>
-                <img id="weather-icon4" src="#" alt="Weather-icon">
-                <h3 id="current-temp4"></h3>
+            <div class="info-container" id="city-four">
+                <div class="search-box">
+                    <h4><b id="city-name4">Shanghai</b></h4>
+                    <img id="weather-icon4" src="#" alt="Weather-icon">
+                    <h3 id="current-temp4"></h3>
+                </div>
+                <div><span>Feels like</span><span id="temp-feels-like4"></span></div>
+                <div><span>Humidity</span><span id="humidity4"></span></div>
+                <div><span>Wind</span><span id="wind4"></span></div>
             </div>
-            <div><span>Feels like</span><span id="temp-feels-like4"></span></div>
-            <div><span>Humidity</span><span id="humidity4"></span></div>
-            <div><span>Wind</span><span id="wind4"></span></div>
-        </div>
-    </article>
-
+        </article>
+    </main>
     <footer>
         <p>© 2023 Weather Forecast AB</p>
         <div id="soc-media-links">
-            <a href="https://www.facebook.com/" target=”_blank”><img src="../images/icons8-facebook.svg" alt="Facebook"></a>
-            <a href="https://www.instagram.com/" target="_blank"><img src="../images/icons8-instagram.svg" alt="Instagram"></a>
-            <a href="https://www.twitter.com/" target="_blank"><img src="../images/icons8-twitter.svg" alt="Twitter"></a>
+            <a href="https://www.facebook.com/" target=”_blank”><img src="../images/icons8-facebook.svg"
+                    alt="Facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../images/icons8-instagram.svg"
+                    alt="Instagram"></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="../images/icons8-twitter.svg"
+                    alt="Twitter"></a>
         </div>
     </footer>
 </body>
