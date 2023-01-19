@@ -16,6 +16,8 @@
     --bgColorSideNav: hsl(0, 0%, 100%, 0.8);
 
     --bgColorHeadFootDarkMode: hsl(217, 33%, 8%);
+    --bgColorSideNavDarkMode: hsl(217, 33%, 8%, 0.8);
+
 }
 
 * {
@@ -357,7 +359,7 @@ footer #soc-media-links{
 
     nav a {
         margin: 1em;
-        font-size: 1em;
+        font-size: .9em;
     }
 
     header h2 a{
@@ -433,8 +435,12 @@ footer #soc-media-links{
         color: var(--txtColorDarkMode);
     }
 
-    .info-container, .day-forecast-container, nav{
+    .info-container, .day-forecast-container{
         background-color: var(--bgColorHeadFootDarkMode);
+    }
+
+    nav {
+        background-color: var(--bgColorSideNavDarkMode);
     }
 
     footer {
@@ -442,8 +448,14 @@ footer #soc-media-links{
     }
 }
 
+/* -------------------- DARK MODE DESKTOP -------------------- */
+
 @media (prefers-color-scheme: dark) and (min-width: 600px) {
     header h2 a::after{
         color: var(--txtColorDarkMode);
+    }
+
+    nav {
+        background: transparent;
     }
 }
