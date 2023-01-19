@@ -304,6 +304,15 @@ button{
     align-items: center;
 }
 
+.search-page-articles{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.search-page-articles div{
+    flex-basis: 100%;
+}
 
 /* -------------------- FOOTER -------------------- */
 
@@ -402,6 +411,11 @@ footer #soc-media-links{
         flex-basis: 100%;
         flex-grow: 1;
         max-width: 20%;
+    }
+
+    /* -------------------- SEARCH -------------------- */
+    .search-page-articles div{
+        flex-basis: 40%;
     }
 
 
