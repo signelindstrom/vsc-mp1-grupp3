@@ -208,8 +208,6 @@ nav .close-nav-btn {
 #about-article{
     margin: 1em;
     padding: 1em;
-    /* border: 2px solid violet; */
-
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -239,7 +237,6 @@ nav .close-nav-btn {
 .contact-article{
     margin: 1em;
     padding: 1em;
-
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -338,7 +335,6 @@ footer{
     height: 5rem;
     padding: 1em;
     background-color: var(--bgColorHeadFoot);
-
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
