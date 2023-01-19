@@ -9,8 +9,6 @@ function showPosition(position) {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
 
-  console.log(`Latitude ${latitude}, Longitude ${longitude}`);
-
   getCityName(latitude, longitude);
   getWeather(latitude, longitude);
   getDailyForecast(latitude, longitude);
@@ -29,7 +27,6 @@ function getCityName(lat, long) {
 
 function locationData(location) {
   const name = document.querySelector('#current-location');
-  console.log(location[0].name)
   name.innerText = location[0].name
 }
 
@@ -46,32 +43,25 @@ function getWeather(lat, long) {
 function weatherData(weather) {
   const temp = document.querySelector('#current-temp');
   temp.innerText = kelvinToCelsius(weather.main.temp) + ' ºC';
-  console.log('Kelvin', weather.main.temp);
-  console.log('Celsius', kelvinToCelsius(weather.main.temp));
 
   const img = document.querySelector('#weather-icon');
   const icon = weather.weather[0].icon
   img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
   // get humidity
-  console.log(weather.main.humidity)
   const humidity = document.querySelector('#humidity');
   humidity.innerText = `${weather.main.humidity}%`;
 
   //get times for sunrise/sunset
-  console.log('Sunrise:', UTCToDate(weather.sys.sunrise * 1000));
-  console.log('Sunset:', UTCToDate(weather.sys.sunset * 1000));
   const sunInfo = document.querySelector('#sunrise-sunset');
   sunInfo.innerText = `${UTCToDate(weather.sys.sunrise * 1000)} / ${UTCToDate(weather.sys.sunset * 1000)}`;
 
   // get wind speed
   const wind = document.querySelector('#wind')
-  console.log(weather.wind.speed)
   wind.innerText = `${weather.wind.speed} m/s`
 
   // get temp feels like
   const tempFeelsLike = document.querySelector('#temp-feels-like');
-  console.log(kelvinToCelsius(weather.main.feels_like))
   tempFeelsLike.innerText = `${kelvinToCelsius(weather.main.feels_like)} ºC`
 }
 
@@ -94,17 +84,13 @@ if (month < 10) {
 }
 let year = date.getFullYear();
 
-// This arrangement can be altered based on how we want the date's format to appear.
 let currentDate = `${year}-${month}-${day}`;
-console.log(currentDate); // "17-6-2022"
 
 function dailyData(dailyForecast) {
   dailyForecast.list.forEach(element => {
     if (!(element.dt_txt.includes(`${currentDate}`))) {
 
       if (element.dt_txt.includes('12:00:00')) {
-        console.log(element.dt_txt)
-        console.log(kelvinToCelsius(element.main.temp))
 
         // 4-day date
         const dayContainer = document.querySelector('#day-container');
@@ -119,7 +105,6 @@ function dailyData(dailyForecast) {
         const dayIcon = document.createElement('img');
         dayIconContainer.appendChild(dayIcon);
         dayIcon.src = `http://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png`;
-        console.log(element.weather[0].icon);
 
         // 4-day temp
         const tempContainer = document.querySelector('#temp-container');
@@ -136,19 +121,16 @@ function dailyData(dailyForecast) {
     const hourlyTemp = document.createElement('span');
     hourlyTempContainer.appendChild(hourlyTemp);
     hourlyTemp.innerText = `${kelvinToCelsius(dailyForecast.list[i].main.temp)} ºC`
-    console.log(dailyForecast.list[i].main.temp)
 
     // 3-hour span icons
     const hourlyIconContainer = document.querySelector('#hourly-icon-container');
     const hourlyIcon = document.createElement('img');
     hourlyIconContainer.appendChild(hourlyIcon);
     hourlyIcon.src = `http://openweathermap.org/img/wn/${dailyForecast.list[i].weather[0].icon}@2x.png`;
-    console.log(dailyForecast.list[i].weather[0].icon)
 
     // 3-hour time-stamp
     const tempTime = dailyForecast.list[i].dt_txt.split(' ')
     const tempTimeCompressed = tempTime[1].split(':')
-    console.log(tempTimeCompressed[0], tempTimeCompressed[1])
     const timeContainer = document.querySelector('#time-container');
     const timeHour = document.createElement('span');
     timeContainer.appendChild(timeHour);
