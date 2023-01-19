@@ -31,19 +31,21 @@
         </nav>
     </header>
 
-    <main id="index-main">
+    <main class="index-main">
+        <section class="weather-section">
         <article id="current-weather">
             <div class="location-container">
                 <span class="material-symbols-outlined">location_on</span>
                 <h1 id="current-location"></h1>
             </div>
-        </article>
+
 
             <div class="current-temp-container">
                 <img id="weather-icon" src="#" alt="Weather-icon">
                 <h3 id="current-temp"></h3>
             </div>
         </article>
+        
 
         <article class="info-container" id="more-info">
             <div><span>Feels like</span><span id="temp-feels-like"></span></div>
@@ -51,7 +53,9 @@
             <div><span>Humidity</span><span id="humidity"></span></div>
             <div><span>Wind</span><span id="wind"></span></div>
         </article>
+    </section>
 
+    <section class="weather-section">
         <article class="info-container" id="hour-forecast">
             <div id="time-container"></div>
             <div id="hourly-icon-container"></div>
@@ -63,14 +67,18 @@
             <div id="day-icon-container"></div>
             <div id="temp-container"></div>
         </article>
+    </section>
     </main>
 
     <footer>
         <p>© 2023 Weather Forecast AB</p>
         <div id="soc-media-links">
-            <a href="https://www.facebook.com/" target=”_blank”><img src="images/icons8-facebook.svg" alt="Facebook"></a>
-            <a href="https://www.instagram.com/" target="_blank"><img src="images/icons8-instagram.svg" alt="Instagram"></a>
-            <a href="https://www.twitter.com/" target="_blank"><img src="images/icons8-twitter.svg" alt="Twitter"></a>
+            <a href="https://www.facebook.com/" target=”_blank”><img src="../images/icons8-facebook.svg"
+                    alt="Facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../images/icons8-instagram.svg"
+                    alt="Instagram"></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="../images/icons8-twitter.svg"
+                    alt="Twitter"></a>
         </div>
     </footer>
 

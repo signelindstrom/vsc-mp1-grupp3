@@ -117,15 +117,18 @@ nav .close-nav-btn {
 
 
 /* -------------------- INDEX MAIN -------------------- */
-
-
-#index-main{
+.index-main{
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     justify-content: space-evenly;
+    flex-basis: 100%;
 }
 
 /*current weather*/
+.weather-section{
+    width: 100%;
+}
+
 .location-container{
     display: flex;
     justify-content: center;
@@ -155,7 +158,6 @@ nav .close-nav-btn {
 
 .info-container{
     background-color: var(--bgColorHeadFoot);
-    margin: 0 2rem 0;
     padding: 1rem;
     margin: 2rem 2rem 2rem;
 }
@@ -386,6 +388,15 @@ footer #soc-media-links{
         color: var(--txtColorLightMode);
     }
 
+
+    /* -------------------- INDEX  -------------------- */
+    .index-main{
+        flex-basis: 40%;
+    }
+
+    .weather-section{
+        width: auto;
+    }
 
     /* -------------------- ABOUT MAIN -------------------- */
 
