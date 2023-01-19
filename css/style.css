@@ -403,9 +403,22 @@ footer #soc-media-links{
 @media (prefers-color-scheme: dark) {
     body {
         background-color: var(--bgColorDarkMode);
+        color: var(--txtColorDarkMode);
     }
 
     header {
+        background-color: var(--bgColorHeadFootDarkMode);
+    }
+
+    nav a {
+        color: var(--txtColorDarkMode);
+    }
+
+    .info-container{
+        background-color: var(--bgColorHeadFootDarkMode);
+    }
+
+    footer {
         background-color: var(--bgColorHeadFootDarkMode);
     }
 }
