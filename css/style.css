@@ -463,6 +463,11 @@ footer #soc-media-links{
     footer {
         background-color: var(--bgColorHeadFootDarkMode);
     }
+
+    footer img {
+        background-color: var(--bgColorDarkMode);
+        border-radius: 20%;
+    }
 }
 
 /* -------------------- DARK MODE DESKTOP -------------------- */
