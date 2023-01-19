@@ -27,6 +27,7 @@
 
 body {
     background-color: var(--bgColorLightMode);
+    color: var(--txtColorLightMode);
 }
 
 img {
@@ -399,6 +400,6 @@ footer #soc-media-links{
 
 @media (prefers-color-scheme: dark) {
     body {
-        background: #000000;
+        background-color: var(--bgColorDarkMode);
     }
 }
