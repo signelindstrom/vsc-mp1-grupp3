@@ -394,11 +394,11 @@ footer #soc-media-links{
     }
 
     #about-article p{
-        flex-basis: 40%;
+        flex-basis: 45%;
     }
     
     #about-article img{
-        max-width: 40%;
+        max-width: 45%;
     }
 
     #about-article #about-section2{
