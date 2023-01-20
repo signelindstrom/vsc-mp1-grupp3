@@ -37,8 +37,9 @@ Louise Kanizsai Ståhl (UX/grafisk design, HTML, CSS)
 Martin Bungner (HTML, CSS)
 
 ### Länkar
-Video tutorial om dark mode: https://www.youtube.com/watch?v=9t6lk4Icm7E
-Stockbilder: Unsplash.com 
-Sociala medier-icons: <a href="https://www.flaticon.com/free-icons/instagram" title="instagram icons">Instagram icons created by Freepik - Flaticon</a> 
-<a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons created by Freepik - Flaticon</a>
+Video tutorial om dark mode: https://www.youtube.com/watch?v=9t6lk4Icm7E  
+Stockbilder: Unsplash.com  
+Sociala medier-icons:  
+<a href="https://www.flaticon.com/free-icons/instagram" title="instagram icons">Instagram icons created by Freepik - Flaticon</a>  
+<a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons created by Freepik - Flaticon</a>  
 <a href="https://www.flaticon.com/free-icons/twitter" title="twitter icons">Twitter icons created by Freepik - Flaticon</a>
