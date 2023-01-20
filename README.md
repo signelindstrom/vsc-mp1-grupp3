@@ -37,7 +37,7 @@ Louise Kanizsai Ståhl (UX/grafisk design, HTML, CSS)
 Martin Bungner (HTML, CSS)
 
 ### Länkar
-Trello kanban: https://trello.com/b/e1k9SH9w/grupp-3
+Trello kanban: https://trello.com/b/e1k9SH9w/grupp-3  
 Video tutorial om dark mode: https://www.youtube.com/watch?v=9t6lk4Icm7E  
 Stockbilder: Unsplash.com  
 Sociala medier-icons:  
