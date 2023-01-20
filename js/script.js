@@ -18,7 +18,7 @@ function showPosition(position) {
 
 // get location name
 function getCityName(lat, long) {
-  const url = `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${long}&appid=a2de5014979b69e8f9f100296b649487`;
+  const url = `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${long}&appid=a2de5014979b69e8f9f100296b649487`;
 
   fetch(url)
     .then(response => response.json())
@@ -46,7 +46,7 @@ function weatherData(weather) {
 
   const img = document.querySelector('#weather-icon');
   const icon = weather.weather[0].icon
-  img.src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+  img.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
   // get humidity
   const humidity = document.querySelector('#humidity');
@@ -67,7 +67,7 @@ function weatherData(weather) {
 
 // get daily forecast
 function getDailyForecast(lat, long) {
-  const url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=a2de5014979b69e8f9f100296b649487`;
+  const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=a2de5014979b69e8f9f100296b649487`;
 
   fetch(url)
     .then(response => response.json())
@@ -104,7 +104,7 @@ function dailyData(dailyForecast) {
         const dayIconContainer = document.querySelector('#day-icon-container');
         const dayIcon = document.createElement('img');
         dayIconContainer.appendChild(dayIcon);
-        dayIcon.src = `http://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png`;
+        dayIcon.src = `https://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png`;
 
         // 4-day temp
         const tempContainer = document.querySelector('#temp-container');
@@ -126,7 +126,7 @@ function dailyData(dailyForecast) {
     const hourlyIconContainer = document.querySelector('#hourly-icon-container');
     const hourlyIcon = document.createElement('img');
     hourlyIconContainer.appendChild(hourlyIcon);
-    hourlyIcon.src = `http://openweathermap.org/img/wn/${dailyForecast.list[i].weather[0].icon}@2x.png`;
+    hourlyIcon.src = `https://openweathermap.org/img/wn/${dailyForecast.list[i].weather[0].icon}@2x.png`;
 
     // 3-hour time-stamp
     const tempTime = dailyForecast.list[i].dt_txt.split(' ')
