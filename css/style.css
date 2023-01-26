@@ -2,20 +2,11 @@
 /* -------------------- UNIVERSAL -------------------- */
 
 :root {
-
     --hoverGrey: hsl(230, 20%, 70%);
-
-    --bgColorLightMode: hsl(186, 65%, 91%);
-    --txtColorLightMode: hsl(195, 9%, 9%);
-
-    --bgColorDarkMode: hsl(216, 33%, 16%);
-    --txtColorDarkMode: hsl(196, 27%, 92%);
-
+    --bgColor: hsl(186, 65%, 91%);
+    --txtColor: hsl(195, 9%, 9%);
     --bgColorHeadFoot: hsl(187, 68%, 95%);
     --bgColorSideNav: hsl(0, 0%, 100%, 0.8);
-
-    --bgColorHeadFootDarkMode: hsl(217, 32%, 8%);
-    --bgColorSideNavDarkMode: hsl(217, 33%, 8%, 0.8);
 }
 
 * {
@@ -28,8 +19,8 @@
 }
 
 body {
-    background-color: var(--bgColorLightMode);
-    color: var(--txtColorLightMode);
+    background-color: var(--bgColor);
+    color: var(--txtColor);
     line-height: 2em;
     display: flex;
     flex-direction: column;
@@ -58,7 +49,7 @@ header>h2>a {
     text-align: center;
     font-size: 2em;
     text-decoration: none;
-    color: var(--txtColorLightMode);
+    color: var(--txtColor);
     background-color: hsl(0, 0%, 100%, 0.8);
     border-radius: 50%;
     /* width: 6vw; */
@@ -98,7 +89,7 @@ nav a {
     margin-right: 1em;
     text-decoration: none;
     font-size: 25px;
-    color: var(--txtColorLightMode);
+    color: var(--txtColor);
     display: block;
     transition: 0.3s;
 
@@ -114,7 +105,7 @@ nav .active-page{
 }
 
 nav .active-page:hover{
-    color: var(--txtColorLightMode);
+    color: var(--txtColor);
 }
 
 nav .close-nav-btn {
@@ -149,7 +140,7 @@ nav .close-nav-btn {
 }
 
 .location-container span{
-    color: var(--txtColorLightMode);
+    color: var(--txtColor);
 }
 
 .current-temp-container{
@@ -205,6 +196,18 @@ nav .close-nav-btn {
 #hourly-icon-container img{
     width: calc(100%/4);
 }
+
+.error-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 1000px;
+    font-size: larger;
+    color: var(--txtColor);
+}
+
 
 /* -------------------- ABOUT MAIN -------------------- */
 
@@ -397,7 +400,7 @@ footer #soc-media-links{
 
     header h2 a::after{
         content: 'eather forecast';
-        color: var(--txtColorLightMode);
+        color: var(--txtColor);
     }
 
 
@@ -470,62 +473,11 @@ footer #soc-media-links{
 /* -------------------- DARK MODE -------------------- */
 
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--bgColorDarkMode);
-        color: var(--txtColorDarkMode);
-    }
-
-    header {
-        background-color: var(--bgColorHeadFootDarkMode);
-    }
-
-    header>h2>a {
-        color: var(--txtColorDarkMode);
-        background-color: var(--bgColorDarkMode);
-    }
-
-    nav a {
-        color: var(--txtColorDarkMode);
-    }
-
-    nav .active-page:hover{
-        color: var(--txtColorDarkMode);
-    }
-
-    nav {
-        background-color: var(--bgColorSideNavDarkMode);
-    }
-
-    .location-container span{
-        color: var(--txtColorDarkMode);
-    }
-
-    .info-container, .day-forecast-container{
-        background-color: var(--bgColorHeadFootDarkMode);
-    }
-
-    footer {
-        background-color: var(--bgColorHeadFootDarkMode);
-    }
-
-    footer img {
-        background-color: var(--bgColorDarkMode);
-        border-radius: 20%;
-    }
-}
-
-/* -------------------- DARK MODE DESKTOP -------------------- */
-
-@media (prefers-color-scheme: dark) and (min-width: 600px) {
-    header h2 a::after{
-        color: var(--txtColorDarkMode);
-    }
-
-    header>h2>a {
-        background-color: var(--bgColorHeadFootDarkMode);
-    }
-
-    nav {
-        background: transparent;
+    :root {
+        --hoverGrey: hsl(230, 20%, 70%);
+        --bgColor: hsl(216, 33%, 16%);
+        --txtColor: hsl(196, 27%, 92%);
+        --bgColorHeadFoot: hsl(217, 32%, 8%);
+        --bgColorSideNav: hsl(217, 33%, 8%, 0.8);
     }
 }

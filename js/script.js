@@ -16,6 +16,27 @@ function showPosition(position) {
 }
 
 
+//if getCurrentPosition failed
+function displayError() {
+  console.log('Geolocation is not supported by this browser');
+
+  const errorMessage = document.createElement('h3');
+  errorMessage.innerText = 'Sorry, something went wrong! Try changing your settings for geolocation permission in your browser.';
+  
+  const errorImg = document.createElement('img');
+  errorImg.src = '../images/sad-sun.png';
+
+  const errorContainer = document.createElement('div');
+  errorContainer.classList.add('error-container');
+  errorContainer.appendChild(errorMessage);
+  errorContainer.appendChild(errorImg);
+
+  const mainContainer = document.getElementById('main-container');
+  mainContainer.innerHTML = '';
+  mainContainer.appendChild(errorContainer);
+}
+
+
 // get location name
 function getCityName(lat, long) {
   const url = `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${long}&appid=a2de5014979b69e8f9f100296b649487`;
@@ -136,11 +157,6 @@ function dailyData(dailyForecast) {
     timeContainer.appendChild(timeHour);
     timeHour.innerText = `${tempTimeCompressed[0]}:${tempTimeCompressed[1]}`
   }
-}
-
-//if getCurrentPosition failed
-function displayError() {
-  console.log('Geolocation is not supported by this browser');
 }
 
 //Converts kelvins to celsius returns a number with one decimal
